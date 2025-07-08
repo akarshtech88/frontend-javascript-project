@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confirm Booking - Agent App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f9f9f9;
+      padding-bottom: 100px; /* space for footer cart button */
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      background: linear-gradient(to right, #0BA5D6 23%, #A62F6E 48%, #8566B6 96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.8rem;
+    }
+    .btn-gradient {
+      background: linear-gradient(to right, #0BA5D6, #A62F6E, #8566B6);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+    }
+    .rounded-card {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .option-item {
+      border: 1px solid #ccc;
+      padding: 10px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      background-color: #fff;
+      transition: all 0.2s ease;
+    }
+    .option-item:hover {
+      border-color: #0BA5D6;
+      background-color: #f4faff;
+    }
+    #cartFooterBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-4">
+
+  <!-- Section: Tour Info -->
+  <!-- <div class="mb-4">
+    <h4 class="section-title">Booking Summary</h4>
+    <div class="rounded-card">
+      <p class="mb-1"><strong>Tour Package:</strong> Maldives Getaway</p>
+      <p class="mb-1"><strong>Travelers:</strong> 2 ADT, 1 CHD, 0 INF</p>
+      <p class="mb-0"><strong>Package Price:</strong> ₹79,999</p>
+    </div>
+  </div> -->
+
+  <!-- Section: Travel Details -->
+  <div class="mb-4">
+    <h4 class="section-title">Set Travel Details</h4>
+    <div class="rounded-card">
+      <div class="mb-3">
+        <label class="form-label">Select Date</label>
+        <input type="date" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Select Hotel</label>
+        <select class="form-select">
+          <option selected disabled>Select hotel</option>
+          <option>Taj Exotica</option>
+          <option>Paradise Island</option>
+          <option>Ocean Villa Resort</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Room Number</label>
+        <input type="text" class="form-control" placeholder="Enter room number (if known)" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Section: Extra Options -->
+  <div class="mb-4">
+    <h4 class="section-title">Add Extra Options</h4>
+    <div class="rounded-card">
+      <div class="option-item">
+        <input class="form-check-input me-2" type="checkbox" value="Dinner" id="dinnerOption" />
+        <label for="dinnerOption" class="form-check-label flex-grow-1">
+          <i class="fas fa-utensils me-2 text-primary"></i> Dinner Included
+        </label>
+      </div>
+      <div class="option-item">
+        <input class="form-check-input me-2" type="checkbox" value="Baby Seat" id="babyOption" />
+        <label for="babyOption" class="form-check-label flex-grow-1">
+          <i class="fas fa-baby-carriage me-2 text-success"></i> Baby Seat
+        </label>
+      </div>
+      <div class="option-item">
+        <input class="form-check-input me-2" type="checkbox" value="Private Car" id="carOption" />
+        <label for="carOption" class="form-check-label flex-grow-1">
+          <i class="fas fa-car me-2 text-warning"></i> Private Car
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section: Remarks -->
+  <div class="mb-4">
+    <h4 class="section-title">Add Remarks</h4>
+    <textarea class="form-control" rows="3" placeholder="Any special requests or instructions..."></textarea>
+  </div>
+
+  <!-- Add to Cart Button -->
+  <div class="text-center">
+    <button class="btn btn-gradient px-4 py-2 w-100" onclick="handleAddToCart()">
+      <i class="fas fa-cart-plus me-2"></i> Add to Cart
+    </button>
+  </div>
+
+</div>
+
+<!-- Sticky View Cart Button -->
+<!-- Sticky View Cart Button (Enhanced) -->
+<div id="cartFooterBtn">
+  <button class="btn rounded-pill px-4 py-2 shadow d-flex align-items-center gap-2 text-nowrap"
+          style="background-color: #0BA5D6; color: white; font-weight: 600;">
+    <i class="fas fa-shopping-cart"></i>
+    View Cart (1)
+    <i class="fas fa-arrow-right ms-2"></i>
+  </button>
+</div>
+
+
+<!-- Scripts -->
+<script>
+  function handleAddToCart() {
+    // Show sticky cart button
+    const cartBtn = document.getElementById('cartFooterBtn');
+    cartBtn.style.display = 'block';
+
+    // Optionally scroll to top or show a toast
+    alert('Item added to cart successfully!');
+  }
+</script>
+
+</body>
+</html>

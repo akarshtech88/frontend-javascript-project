@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Tour Packages</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      /* background-color: #eef6f7; */
+      background-color: #f5f4f4;
+      font-family: "Poppins", sans-serif;
+    }
+    .section-heading {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      /* background: linear-gradient(to right, #0BA5D6 60%, #A62F6E 100%); */
+      background: #7e7d7d;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    /* new one  */
+
+
+  </style>
+
+</head>
+<body>
+
+
+<!-- navbar css -->
+<style>
+   .circle-icon {
+      background-color: rgb(242,95,95);
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  .brand-name {
+    background: rgb(242,95,95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .cart-icon-wrapper {
+    position: relative;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background: black;
+    color: white;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+
+  .search-bar-container {
+    display: none;
+  }
+
+  .search-bar-container.active {
+    display: block;
+  }
+
+  .offcanvas-menu-item {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .offcanvas-menu-item:hover {
+    background-color: #f8f9fa;
+  }
+
+  .offcanvas-menu-item i {
+    margin-right: 15px;
+    color: #7e7d7d;
+    width: 20px;
+    text-align: center;
+  }
+
+  .logout-btn {
+    color: #e74c3c;
+  }
+</style>
+
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-white shadow-sm px-2 py-4">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <!-- Left: Hamburger -->
+    <button class="btn p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+      <i class="fas fa-bars text-secondary fs-5"></i>
+    </button>
+
+    <!-- Center: Brand Name -->
+    
+    <span class="mx-auto position-absolute start-50 translate-middle-x brand-name">
+      <a href="/tour packages.html">
+      <img src="./assets/zahara-tours-logo.svg" alt="Agent Logo" class=" ms-2" style="width: 70px; height: 70px; ">
+    </a>
+    </span>
+  </a>
+    <!-- Right: Icons -->
+    <div class="d-flex align-items-center gap-3">
+      <!-- Search -->
+      <button class="btn p-0 border-0 text-secondary" id="searchToggle">
+        <i class="fas fa-search fs-5"></i>
+      </button>
+
+      <!-- Cart with badge -->
+       <a href="/bookingsummary.html">
+      <div class="cart-icon-wrapper">
+        <i class="fas fa-shopping-cart fs-5 text-dark"></i>
+        <span class="cart-badge">0</span>
+      </div>
+    </a>
+    </div>
+  </div>
+
+  <!-- Search bar (toggle on click) -->
+  <div class="px-3 search-bar-container" id="searchBarContainer">
+    <input type="text" class="form-control mt-4 rounded-pill" placeholder="Search tours...">
+  </div>
+</nav>
+
+<style>
+  .btn-cls{
+    font-size: 12px;
+    position: relative;
+    bottom: 24px;
+  }
+</style>
+<!-- Offcanvas Menu -->
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" style="width: 80%;">
+  <div class="offcanvas-header border-bottom">
+    <div class="d-flex align-items-center">
+      <div class="agent-avatar me-3 circle-icon">A</div>
+      <div>
+        <h5 class="offcanvas-title mb-0">Agent Dashboard</h5>
+        <small class="text-muted">Tour Operator</small>
+      </div>
+    </div>
+    <button type="button" class="btn-close btn-cls" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <a href="/tour packages.html" class="offcanvas-menu-item">
+      <i class="fas fa-home me-2"></i>Home
+    </a>
+    <a href="/tour packages.html" class="offcanvas-menu-item">
+      <i class="fas fa-suitcase me-2"></i>Tour Packages
+    </a>
+    <a href="/bookingsummary.html" class="offcanvas-menu-item">
+      <i class="fas fa-calendar-check me-2"></i>My Bookings
+    </a>
+    <a href="/payment.html" class="offcanvas-menu-item">
+      <i class="fas fa-credit-card me-2"></i>Payments
+    </a>
+    <a href="wishlist.html" class="offcanvas-menu-item">
+      <i class="fas fa-heart me-2"></i>Wishlist
+    </a>
+    <a href="profile.html" class="offcanvas-menu-item">
+      <i class="fas fa-user me-2"></i>Profile
+    </a>
+  </div>
+  <div class="offcanvas-footer p-3 border-top">
+    <a href="./login.html" class="offcanvas-menu-item logout-btn">
+      <i class="fas fa-sign-out-alt me-2"></i>Logout
+    </a>
+  </div>
+</div>
+
+
+
+  <style>
+
+
+   /* Paragraph Styling */
+   .package-intro {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Responsive Padding */
+    @media (min-width: 768px) {
+      .package-section {
+        padding: 2rem 3rem;
+      }
+    }
+
+
+</style>
+
+<!-- 
+slider css -->
+<style>
+  .package-slider {
+ padding-left: 5px;
+ padding-right: 0px;
+ overflow: visible;
+}
+.slick-slide {
+ margin-right: 16px;
+}
+.slick-list {
+ overflow: visible !important;
+}
+.pos-custom{
+   position: relative;
+   right: 1%;
+}
+
+.cus-wid {
+   width: 310px !important;
+
+ }
+
+ .slick-track {
+   display: flex !important;
+   align-items: stretch;
+ }
+
+ 
+
+ .slick-slide {
+   transition: all 0.3s ease;
+ }
+
+</style>
+<!-- 
+  slider css -->
+  <style>
+    .package-slider {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    .package-slider.slider-ready {
+      opacity: 1;
+    }
+  </style>
+
+<div class="container py-4">
+
+
+  <!-- nav tab css -->
+  <style>
+    /* .nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+  } */
+
+  .nav-tabs .nav-link {
+    /* background-color: red; */
+    color: #7e7d7d;
+    /* border: none;
+    padding: 6px 14px; 
+    font-size: 15px;    
+    margin: 0 6px;      
+    border-radius: 20px; */
+  } 
+
+  .nav-tabs .nav-link.active {
+    background-color: red;
+    color: white;
+  }
+
+  </style> 
+
+<!-- banner img css -->
+<style>
+  .top-banner-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 767px) {
+    .top-banner-img {
+      height: 190px;
+    }
+  }
+
+
+  
+  </style>
+    
+  <!-- <img src="./assets/Zahara-Tour-img.jpg" alt="Zahara Tour" class="top-banner-img img-fluid"> -->
+
+
+  <div id="topBannerCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+    <!-- Indicators (dots) -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#topBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#topBannerCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#topBannerCarousel" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!-- Slides -->
+    <div class="carousel-inner rounded-3">
+      <div class="carousel-item active position-relative">
+        <img src="./assets/Zahara-Tour-img.jpg" class="top-banner-img d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-block text-overlay" >
+          <h2 style="line-height: 20px;">Experience Oman</h2>
+          <p>with Zahara Tours</p>
+        </div>
+      </div>
+      <div class="carousel-item position-relative">
+        <img src="./assets/Zahara-Tour-home-top-slider-1800x720-18_720_1800.jpg" class="top-banner-img d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-block text-overlay" >
+          <h2 style="line-height: 20px;">Experience Safari</h2>
+          <p>with Zahara Tours</p>
+        </div>
+      </div>
+      <div class="carousel-item position-relative">
+        <img src="./assets/banner zahara.jpg" class="top-banner-img d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-block text-overlay" >
+          <h2 style="line-height: 20px;">Experience Oman</h2>
+          <p>with Zahara Tours</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Arrows -->
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#topBannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#topBannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button> -->
+  </div>
+  <script>
+    const myCarousel = document.querySelector('#topBannerCarousel');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 100, // change slide every 3 sec
+      ride: 'carousel'
+    });
+  </script>
+  
+  <!-- Nav Tabs -->
+  <ul class="nav nav-tabs mb-3" id="excursionTab" role="tablist">
+    <li class="nav-item" role="presentation"  >
+      <button class="nav-link active" id="muscat-tab" data-bs-toggle="tab" data-bs-target="#muscat" type="button" role="tab" >Muscat Excursions</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="salalah-tab" data-bs-toggle="tab" data-bs-target="#salalah" type="button" role="tab">Salalah Excursions</button>
+    </li>
+  </ul>
+  <p class="package-intro">
+    From awe-inspiring natural wonders to stunning architecture, and amazing nature and Omani culture. Discover some of the best day tours and excursions in Oman with Zahara Tours.
+  </p>
+  <!-- Tab Content -->
+
+<!-- package card css -->
+  
+  <style>
+    .package-card {
+      border-radius: 12px;
+      overflow: hidden;
+  
+      transition: 0.3s ease-in-out;
+      margin-bottom: 20px;
+    }
+  
+    .package-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+  
+    
+    .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+  .badge-wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  
+  .cus-wid {
+    width: 310px !important;
+
+  }
+  .location-badge {
+    /* background-color: white; */
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    white-space: nowrap;
+  }
+  .type-badge {
+    background-color: transparent;
+   
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    white-space: nowrap;
+  }
+  .location-badge {
+    color: #ff5722;
+    display: flex;
+    align-items: center;
+  }
+  
+  .type-badge {
+    color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+    .book-btn {
+      background-color: #777474;
+      color: white;
+      border-radius: 30px;
+      padding: 6px 15px;
+      font-weight: 500;
+      font-size: 12px;
+      border: none;
+    }
+    .book-btn2 {
+      background-color: #777474!important;
+      color: white!important;
+      border-radius: 30px;
+      padding: 6px 20px;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+    }
+    .book-btn:hover {
+      background-color: #333;
+    }
+  
+    .price-text {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0;
+    }
+  
+    .price-amount {
+      color: #d32f2f;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  
+    .duration-info {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+  
+    .card-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 6px;
+    }
+  
+    .card-text {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+  </style> 
+   
+  <div class="tab-content" id="excursionTabContent">
+ 
+
+
+    <!-- Muscat -->
+    <div class=" tab-pane fade show active" id="muscat"  role="tabpanel">
+      <h2 class="section-heading">Muscat Excursions</h2>
+
+
+      <div class="package-slider">
+        <!-- Card 1 -->
+
+        
+        <div class="package-card card position-relative cus-wid" > 
+          <div class="image-wrapper">
+          <img src="./assets/mus-slid-2.jpg" alt="Muscat Tour">
+          <div class="badge-wrapper">
+          <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i> <span class="text-white">Muscat</span></div>
+          <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+        </div>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-0">
+            <h5 class="card-title"> Snorkeling Trips</h5>
+            <div class="rating mb-2" style="font-size: 0.85rem;">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star-half-alt text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+              
+            </div>
+</div>
+            <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 1 Day / 0 Night | 8 Hours</p>
+            <!-- <p class="card-text">The city of Sur is one of the ancient Omani cities. A must-visit with rich culture and history.</p> -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="price-text mb-0">Starts From:</p>
+                <span class="price-amount">₹12,800</span>
+              </div>
+              <button class="book-btn " data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="package-card card position-relative cus-wid">
+          <div class="image-wrapper">
+          <img src="./assets/mus-slid-1.jpg" alt="Wadi Tour">
+          <div class="badge-wrapper">
+          <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i>  <span class="text-white">Wahiba Sands</span></div>
+          <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+          </div>
+        </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-0">
+            <h5 class="card-title">Wahiba Wilderness</h5>
+            <div class="rating mb-2" style="font-size: 0.85rem;">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star-half-alt text-warning"></i>
+              <!-- <i class="far fa-star text-warning"></i> -->
+              
+            </div>
+            </div>
+            <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 1 Day / 0 Night | 6 Hours</p>
+            <!-- <p class="card-text">Trek through stunning wadis and hidden pools for an unforgettable day.</p> -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="price-text mb-0">Starts From:</p>
+                <span class="price-amount">₹38,500</span>
+              </div>
+              <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+            </div>
+          </div>
+        </div>
+    
+    
+        <!-- Card 3 -->
+        <div class="package-card card position-relative cus-wid"> 
+          <div class="image-wrapper">
+          <img src="./assets/kashmir.webp" alt="Muscat Tour">
+          <div class="badge-wrapper">
+          <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i> <span class="text-white">Sur</span></div>
+          <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+        </div>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-0"
+            <h5 class="card-title">Coastal Trip to Sur</h5>
+            <div class="rating mb-2" style="font-size: 0.85rem;">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <!-- <i class="fas fa-star-half-alt text-warning"></i> -->
+              <!-- <i class="far fa-star text-warning"></i> -->
+              
+            </div>
+            </div>
+
+            <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 1 Day / 0 Night | 8 Hours</p>
+            <!-- <p class="card-text">The city of Sur is one of the ancient Omani cities. A must-visit with rich culture and history.</p> -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="price-text mb-0">Starts From:</p>
+                <span class="price-amount">₹12,800</span>
+              </div>
+              <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+            </div>
+          </div>
+        </div>
+    
+    
+      </div>
+    
+      
+
+
+      <div class="row d-flex justify-content-center mt-4  ">
+   
+  
+        <div class="col-md-6">
+
+          <div class="package-card card position-relative"> 
+            <div class="image-wrapper">
+            <img src="./assets/muscat-img-1.jpg" alt="Muscat Tour">
+            <div class="badge-wrapper">
+            <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i> <span class="text-white">Sur</span></div>
+            <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+          </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-0">
+              <h5 class="card-title">Coastal Trip to Sur</h5>
+              <div class="rating mb-2" style="font-size: 0.85rem;">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+                <i class="far fa-star text-warning"></i>
+                
+              </div>
+</div>
+              <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 1 Day / 0 Night | 8 Hours</p>
+              <p class="card-text">The city of Sur is one of the ancient Omani cities. A must-visit with rich culture and history.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="price-text mb-0">Starts From:</p>
+                  <span class="price-amount">₹12,800</span>
+                </div>
+                <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+  
+     
+        <div class="col-md-6">
+
+          <div class="package-card card position-relative">
+            <div class="image-wrapper">
+            <img src="./assets/muscat-img-2.jpg" alt="Wadi Tour">
+            <div class="badge-wrapper">
+            <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i><span class="text-white">Muscat</span></div>
+            <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+            </div>
+          </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-0">
+              <h5 class="card-title">A Wadi walk</h5>
+              <div class="rating mb-2" style="font-size: 0.85rem;">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+                <i class="far fa-star text-warning"></i>
+                
+              </div>
+              </div>
+              <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 1 Day / 0 Night | 6 Hours</p>
+              <p class="card-text">Trek through stunning wadis and hidden pools for an unforgettable day.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="price-text mb-0">Starts From:</p>
+                  <span class="price-amount">₹38,500</span>
+                </div>
+                <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> 
+
+      
+
+
+
+    </div>
+  
+    <!-- Salalah -->
+    <div class="tab-pane fade" id="salalah" role="tabpanel">
+
+      
+      <div class="row">
+        <h2 class="section-heading">Salalah Excursions</h2>
+
+        <div class="package-slider ps-3">
+          <!-- Card 1 -->
+          <div class="package-card card position-relative cus-wid">
+            <div class="image-wrapper">
+            <img src="./assets/salalah-slid-1.jpg" alt="Salalah Safari">
+            <div class="badge-wrapper">
+            <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i> <span class="text-white">Salalah</span></div>
+           <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+            </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-0">
+              <h5 class="card-title">Serene Salalah</h5>
+              <div class="rating mb-2" style="font-size: 0.85rem;">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+                <i class="far fa-star text-warning"></i>
+                
+              </div>
+              </div>
+              <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 2 Days / 1 Night</p>
+              <!-- <p class="card-text">Enjoy the scenic mountains and waterfalls of Salalah with a relaxing overnight stay.</p> -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="price-text mb-0">Starts From:</p>
+                  <span class="price-amount">₹55,000</span>
+                </div>
+                <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="package-card card position-relative cus-wid">
+            <div class="image-wrapper">
+            <img src="./assets/salalah-slid-2.jpg" alt="Salalah Beach">
+            <div class="badge-wrapper">
+            <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i><span class="text-white">East Salalah</span>  </div>
+            <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+            </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-0">
+              <h5 class="card-title">Fabled Castles</h5>
+              <div class="rating mb-2" style="font-size: 0.85rem;">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+                <i class="far fa-star text-warning"></i>
+                
+              </div>
+              </div>
+              <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 1 Day / 0 Night</p>
+              <!-- <p class="card-text">Relax at white sand beaches and turquoise waters with full day resort access.</p> -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="price-text mb-0">Starts From:</p>
+                  <span class="price-amount">₹48,000</span>
+                </div>
+                <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="package-card card position-relative cus-wid">
+            <div class="image-wrapper">
+            <img src="./assets/maldives.webp" alt="Salalah Safari">
+            <div class="badge-wrapper">
+            <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i> <span class="text-white"> Salalah</span> </div>
+            <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+            </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-0">
+              <h5 class="card-title">Salalah Mountain Safari</h5>
+              <div class="rating mb-2" style="font-size: 0.85rem;">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <!-- <i class="fas fa-star-half-alt text-warning"></i>
+                <i class="far fa-star text-warning"></i> -->
+                
+              </div>
+              </div>
+              <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 2 Days / 1 Night</p>
+              <!-- <p class="card-text">Enjoy the scenic mountains and waterfalls of Salalah with a relaxing overnight stay.</p> -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="price-text mb-0">Starts From:</p>
+                  <span class="price-amount">₹55,000</span>
+                </div>
+                <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+      
+      
+        </div>
+      
+        
+   <!-- Package 3 -->
+        <div class="col-md-6">
+
+          <div class="package-card card position-relative">
+            <div class="image-wrapper">
+            <img src="./assets/salalah-img-1.jpg" alt="Salalah Safari">
+            <div class="badge-wrapper">
+            <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i> <span class="text-white">Salalah</span> </div>
+            <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+            </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-0">
+              <h5 class="card-title">Jebel Safari Tour</h5>
+              <div class="rating mb-2" style="font-size: 0.85rem;">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+                <i class="far fa-star text-warning"></i>
+                
+              </div>
+              </div>
+              <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 2 Days / 1 Night</p>
+              <p class="card-text">Enjoy the scenic mountains and waterfalls of Salalah with a relaxing overnight stay.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="price-text mb-0">Starts From:</p>
+                  <span class="price-amount">₹55,000</span>
+                </div>
+                <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Package 4 -->
+
+        
+        <div class="col-md-6">
+          <div class="package-card card position-relative">
+            <div class="image-wrapper">
+            <img src="./assets/salalah-img-2.jpg" alt="Salalah Beach">
+            <div class="badge-wrapper">
+            <div class="location-badge"><i class="fas fa-map-marker-alt me-1"></i> <span class="text-white">Ubar</span> </div>
+            <a href="/tour detail.html" class="text-decoration-none"> <div class="type-badge">Excursion</div></a>
+            </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-0">
+              <h5 class="card-title">Lost City Ubar</h5>
+              <div class="rating mb-2" style="font-size: 0.85rem;">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+                <i class="far fa-star text-warning"></i>
+                
+              </div>
+              </div>
+              <p class="duration-info"><i class="fas fa-calendar-alt me-1 text-danger"></i> 1 Day / 0 Night</p>
+              <p class="card-text">Relax at white sand beaches and turquoise waters with full day resort access.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="price-text mb-0">Starts From:</p>
+                  <span class="price-amount">₹48,000</span>
+                </div>
+                <button class="book-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  
+  </div>
+
+
+</div>
+<script>
+  document.getElementById('searchToggle').addEventListener('click', function () {
+    const searchBar = document.getElementById('searchBarContainer');
+    searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
+
+
+   <style>
+        /* .btn-gradient {
+          background: linear-gradient(to right, #0BA5D6, #A62F6E, #8566B6);
+          color: white;
+          border: none;
+          font-weight: 600;
+          border-radius: 10px;
+        } */
+
+        .modal-title{
+
+          background: rgb(242,95,95);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+        }
+        .modal-content {
+          border-radius: 20px;
+        }
+        .number-control {
+          position: relative;
+          padding-bottom: 20px;
+        }
+        .number-control-arrows {
+          position: absolute;
+          right: 21px;
+          bottom: 27px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .number-control-arrows i {
+          font-size: 9px;
+          cursor: pointer;
+          color: #6c757d;
+          margin: 1px 0;
+        }
+      </style>
+      
+<!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bookingModalLabel">Tour Booking Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingForm">
+          <!-- <div class="mb-3">
+            <label for="selectTour" class="form-label" style="font-size: 15px; color: #444; font-weight: 500;">Select Tour Package</label>
+            <select class="form-select" id="selectTour" required>
+              <option value="">Choose...</option>
+              <option value="Maldives">Maldives Getaway</option>
+              <option value="Paris">Romantic Paris</option>
+              <option value="Swiss">Swiss Alps Adventure</option>
+              <option value="Kerala">Kerala Backwaters</option>
+              <option value="Dubai">Dubai Desert Safari</option>
+              <option value="Kashmir">Kashmir Paradise</option>
+            </select>
+          </div> -->
+          <div class="row">
+            <!-- ADT -->
+            <div class="col-4 number-control">
+              <label class="form-label" style="font-size: 15px; color: #444; font-weight: 500;"> Adults:</label>
+              <input type="number" class="form-control text-center" id="adtInput" min="0" value="1" />
+              <div class="number-control-arrows">
+                <i class="fas fa-chevron-up" onclick="adjustCount('adtInput', 1)"></i>
+                <i class="fas fa-chevron-down" onclick="adjustCount('adtInput', -1)"></i>
+              </div>
+            </div>
+
+            <!-- CHD -->
+            <div class="col-4 number-control">
+              <label class="form-label" style="font-size: 15px; color: #444; font-weight: 500;"> Children:</label>
+              <input type="number" class="form-control text-center" id="chdInput" min="0" value="0" />
+              <div class="number-control-arrows">
+                <i class="fas fa-chevron-up" onclick="adjustCount('chdInput', 1)"></i>
+                <i class="fas fa-chevron-down" onclick="adjustCount('chdInput', -1)"></i>
+              </div>
+            </div>
+
+            <!-- INF -->
+            <div class="col-4 number-control">
+              <label class="form-label" style="font-size: 15px; color: #444; font-weight: 500;"> Infants:</label>
+              <input type="number" class="form-control text-center" id="infInput" min="0" value="0" />
+              <div class="number-control-arrows">
+                <i class="fas fa-chevron-up" onclick="adjustCount('infInput', 1)"></i>
+                <i class="fas fa-chevron-down" onclick="adjustCount('infInput', -1)"></i>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+      
+        <!-- <button class="btn btn-gradient w-100" type="submit" form="bookingForm">Continue Booking</button> -->
+        <a href="/tour detail.html" class="btn book-btn2 w-100" form="bookingForm" data-bs-dismiss="modal" onclick="setTimeout(() => window.location.href='tour detail.html', 500)">
+          Continue Booking
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true, // animation happens only once when scrolled into view
+    offset: 100, // distance from the top to trigger animation
+  });
+</script>
+
+ 
+
+
+
+<script>
+  document.querySelectorAll('[data-bs-target="#bookingModal"]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const tourTitle = this.closest('.card').querySelector('.card-title')?.textContent;
+      const select = document.getElementById('selectTour');
+      if (tourTitle) {
+        for (let opt of select.options) {
+          if (opt.text.includes(tourTitle)) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+    });
+  });
+</script>
+<script>
+  function adjustCount(id, step) {
+    const input = document.getElementById(id);
+    let value = parseInt(input.value) || 0;
+    value += step;
+    if (value < 0) value = 0;
+    input.value = value;
+  }
+</script>
+
+
+
+ <!-- <script>
+  $('.package-slider').slick({
+    infinite: false, // stops repeating loop
+    slidesToShow: 1.15, // full 1 card + minimal of next
+    centerMode: true,    // Enables peeking effect
+      centerPadding: '5px', // Space on left/right for peeking
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1.1 // for smaller mobiles
+        }
+      }
+      
+    ]
+  });
+  
+  
+  </script>  -->
+
+<!-- 
+  <script>
+    const sliderInitialized = {
+      muscat: false,
+      salalah: false
+    };
+  
+    function initPackageSlider(tabId) {
+      const $slider = $(`#${tabId} .package-slider`);
+      const $tabPane = $(`#${tabId}`);
+  
+      if (!$slider.hasClass('slick-initialized')) {
+        // Temporarily show hidden tab for Slick to measure
+        const wasHidden = !$tabPane.hasClass('show');
+        if (wasHidden) {
+          $tabPane.css({
+            display: 'block',
+            visibility: 'hidden',
+            position: 'absolute',
+            zIndex: -1
+          });
+        }
+  
+        // Initialize Slick
+        $slider.slick({
+          infinite: false,
+          slidesToShow: 1.15,
+          centerMode: true,
+          centerPadding: '5px',
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1.1
+              }
+            }
+          ]
+        });
+  
+        if (wasHidden) {
+          $tabPane.removeAttr('style');
+        }
+  
+        sliderInitialized[tabId] = true;
+      } else {
+        setTimeout(() => {
+          $slider.slick('setPosition');
+        }, 200);
+      }
+    }
+  
+    $(document).ready(function () {
+      initPackageSlider('muscat');
+    });
+  
+    $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+      const targetId = $(e.target).data('bs-target').replace('#', '');
+      setTimeout(() => {
+        initPackageSlider(targetId);
+      }, 300);
+    });
+  </script>
+   -->
+   <script>
+    const sliderInitialized = {
+      muscat: false,
+      salalah: false
+    };
+  
+    function initPackageSlider(tabId) {
+      const $slider = $(`#${tabId} .package-slider`);
+      const $tabPane = $(`#${tabId}`);
+  
+      if (!$slider.hasClass('slick-initialized')) {
+        const wasHidden = !$tabPane.hasClass('show');
+        if (wasHidden) {
+          $tabPane.css({
+            display: 'block',
+            visibility: 'hidden',
+            position: 'absolute',
+            zIndex: -1
+          });
+        }
+  
+        $slider.slick({
+          infinite: false,
+          slidesToShow: 1.15,
+          centerMode: true,
+          centerPadding: '5px',
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1.1
+              }
+            }
+          ]
+        });
+  
+        // After Slick is ready, show the slider smoothly
+        setTimeout(() => {
+          $slider.addClass('slider-ready');
+          if (wasHidden) {
+            $tabPane.removeAttr('style');
+          }
+        }, 100); // Delay just enough to avoid flicker
+      } else {
+        setTimeout(() => {
+          $slider.slick('setPosition');
+        }, 200);
+      }
+  
+      sliderInitialized[tabId] = true;
+    }
+  
+    $(document).ready(function () {
+      initPackageSlider('muscat');
+    });
+  
+    $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+      const targetId = $(e.target).data('bs-target').replace('#', '');
+      setTimeout(() => {
+        initPackageSlider(targetId);
+      }, 300);
+    });
+  </script>
+  
+
+  <style>
+    .package-slider {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    .package-slider.slider-ready {
+      opacity: 1;
+    }
+  </style>
+  
+</body>
+</html>

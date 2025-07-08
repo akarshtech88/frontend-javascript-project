@@ -1,0 +1,57 @@
+background: linear-gradient(to right, #0BA5D6 23%, #A62F6E 80%, #8566B6 96%);
+
+some page hav this color working for heading # tour detail page 
+
+------------------------
+
+both looking same -------
+
+ background: linear-gradient(to right, #0BA5D6 60%, #A62F6E 100%, #8566B6 96%);
+
+ some page hav this color working for heading # tour  packages  
+ --------------------------
+
+
+ button on anchor tag ----------
+
+type 1-----
+  <a href="/tour packages.html" class="text-decoration-none">
+        <button type="button" class="btn btn-custom w-100 py-2">Sign in</button>
+      </a>
+
+-------------------
+
+type2------------
+       <!-- <button class="btn btn-gradient w-100" type="submit" form="bookingForm">Continue Booking</button> -->
+        <a href="/tour detail.html" class="btn btn-gradient w-100" form="bookingForm" data-bs-dismiss="modal" onclick="setTimeout(() => window.location.href='tour detail.html', 500)">
+          Continue Booking
+        </a>
+
+---------------------------------------------------------------
+
+see this the script of on one slide show 1.2 and when sliding it will show on center --------
+  note ------- on slide show manage width that thy loking good on both mobile and desktop 
+  when you use card slide thta was maiinly for mobile and also wnat goos to see n desktop then asjust width then looking good on both mobile and desktop
+  end --- adjust width so thye looking good on both  
+        <script>
+$('.package-slider').slick({
+  infinite: false, // stops repeating loop
+  slidesToShow: 1.15, // full 1 card + minimal of next
+  centerMode: true,    // Enables peeking effect
+    centerPadding: '5px', // Space on left/right for peeking
+  slidesToScroll: 1,
+  dots: false,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1.1 // for smaller mobiles
+      }
+    }
+    
+  ]
+});
+
+
+</script> 
