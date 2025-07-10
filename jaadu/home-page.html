@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaadu- A Bookkeeping Software with Tally Integration”</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<style>
+  body {
+    /* background-color: #F5F9FF */
+    background-color: #f5f9fa;
+}
+  .navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+  }
+  .navbar-brand img {
+      height: 50px;
+      
+  }
+  .nav-link {
+      color: #1a237e !important; /* Dark blue to match your logo */
+      font-weight: 500;
+      margin: 0 8px;
+      padding: 8px 12px !important;
+      
+  }
+  .nav-link:hover {
+      color: #0d47a1 !important;
+    
+  }
+  .btn-login {
+      background-color:  #366efd;
+      color: white !important;
+      border-radius: 6px;
+      padding: 8px 20px !important;
+      margin-left: 10px;
+      
+  }
+  .btn-login:hover {
+      background-color: #0d47a1;
+      color: #fff!important;
+     
+    
+  }
+  .navbar-toggler {
+      border: none;
+      padding: 0.5rem;
+     
+  }
+  .navbar-toggler:focus {
+      box-shadow: none;
+  }
+  .custom-toggler .navbar-toggler-icon {
+      background-image: none;
+      font-size: 1.3rem;
+      color: #1a237e;
+      
+  }
+  @media (max-width: 991.98px) {
+      .navbar-collapse {
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          margin-top: 15px;
+      }
+      .nav-item {
+          margin-bottom: 10px;
+      }
+      .btn-login {
+          margin-left: 0;
+          margin-top: 10px;
+          display: inline-block;
+      }
+  }
+</style>
+<body>
+
+<div class="wrapper">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+              <img src="./assets/jaadu-logo.png" alt="Jaadu Bookkeeping Software">
+          </a>
+          
+          <!-- Mobile Toggle Button -->
+          <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                  <i class="fas fa-bars" id="togglerIcon"></i>
+              </span>
+          </button>
+          
+          <!-- Nav Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#features">Features</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#tally-integration">Tally Integration</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#pricing">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#testimonials">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#faq">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link btn-login" href="#">
+                          <i class="fas fa-sign-in-alt me-2"></i>Login
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+
+  <!-- banner css-->
+  <style>
+    .antique-ledger {
+        position: relative;
+        overflow: hidden;
+        padding: 2rem 6rem;
+    }
+   
+    .antique-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 500;
+        color: #1a237e;
+       
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+    .antique-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #1a237e, transparent);
+    }
+    .antique-subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 1.3rem;
+        font-style: italic;
+    }
+    .antique-tagline {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.3rem;
+        color: #555;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    .antique-tagline i {
+        margin-right: 15px;
+        color: #1a237e;
+        font-size: 1.3rem;
+    }
+    .antique-img {
+        max-height: 350px;
+        object-fit: contain;
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+       
+        border-radius: 4px;
+    
+    }
+    .btn-antique {
+        background: transparent;
+        color: #1a237e;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        padding:3px 20px;
+        border-radius: 0;
+        border: 2px solid #1a237e;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .btn-antique::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #0d6efd;
+        transition: all 0.4s ease;
+        z-index: -1;
+    }
+    .btn-antique:hover {
+        color: white;
+        transform: translateY(-3px);
+    }
+    .btn-antique:hover::before {
+        left: 0;
+    }
+    @media (max-width: 768px) {
+        .antique-ledger {
+            padding: 3rem 1.3rem;
+            text-align: center;
+        }
+        .antique-title {
+            font-size: 2.5rem;
+        }
+        .antique-subtitle {
+            font-size: 1.4rem;
+        }
+        .antique-tagline {
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+<!-- banner -->
+
+
+<div class="container my-3 px-3 ">
+    <div class="row antique-ledger align-items-center">
+        <!-- Image: shown first on mobile, second on desktop -->
+        <div class="col-lg-6 text-center order-1 order-lg-2">
+            <img src="./assets/banner2.png" alt="Jaadu Bookkeeping" class="img-fluid antique-img">
+        </div>
+
+        <!-- Text & Button: shown second on mobile, first on desktop -->
+        <div class="col-lg-6 order-2 order-lg-1">
+            <h1 class="antique-title">Welcome to Jaadu</h1>
+            <h2 class="antique-subtitle">Smart Bookkeeping with Seamless Tally Integration</h2>
+            <div class="antique-tagline">
+                <i class="fas fa-feather-alt"></i>
+                <span>Effortless Accounting. Real-Time Sync. Magical Results.</span>
+            </div>
+            <button class="btn btn-antique">Begin Your Journey</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- section1 css-->
+
+<style>
+    .jaadu-card {
+      /* transition: all 0.3s ease; */
+      border: 1px solid rgba(26, 35, 126, 0.1);
+    }
+    .jaadu-card:hover {
+      /* transform: translateY(-5px); */
+      /* box-shadow: 0 10px 25px rgba(26, 35, 126, 0.1) !important; */
+    }
+    .feature-badge {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: rgba(26, 35, 126, 0.08);
+      color: #1a237e;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      transition: all 0.2s ease;
+    }
+    .feature-badge:hover {
+      background: rgba(26, 35, 126, 0.15);
+      transform: scale(1.05);
+    }
+    .feature-badge i {
+      margin-right: 5px;
+      font-size: 0.8rem;
+    }
+    .icon-wrapper {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 767px) {
+      .icon-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+  
+  <div class="container my-3 py-lg-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <!-- Header Section -->
+        <div class="text-center mb-5 px-3">
+          <div class="d-flex justify-content-center mb-3">
+            <span class="feature-badge">
+              <i class="fas fa-certificate"></i> Premium Solution
+            </span>
+            <span class="feature-badge">
+              <i class="fas fa-bolt"></i> Fast Implementation
+            </span>
+          </div>
+          <h2 class="fw-semibold mb-3" style="font-size: 1.8rem; color: #1a237e;">What is <span class="" style="color: #3c82f5">Jaadu?</span> </h2>
+          <p class="text-muted mx-auto" style="max-width: 700px; font-size: 1.05rem; line-height: 1.3;">
+            Modern bookkeeping for Tally users who want simplicity without compromise
+          </p>
+        </div>
+  
+        <!-- Main Content Grid -->
+        <div class="row g-4">
+          <!-- Main Content Card -->
+          <div class="col-md-6">
+            <div class="card border-0 h-100 shadow-sm jaadu-card p-4">
+              <div class="d-flex mb-3">
+                <span class="feature-badge">
+                  <i class="fas fa-star"></i> Featured
+                </span>
+                <span class="feature-badge">
+                  <i class="fas fa-trophy"></i> Award Winning
+                </span>
+              </div>
+              <div class="card-body p-0">
+                <p style="font-size: 0.85rem; line-height: 1.7; color: #444;">
+                  Jaadu is a modern bookkeeping software designed for businesses that rely on Tally, but want an easier, smarter, and faster way to manage day-to-day accounts. Whether you're a small business owner, accountant, or finance team, Jaadu simplifies everything—from entries to insights.
+                </p>
+                
+                <div class="mt-4 pt-2">
+                  <div class="d-flex flex-wrap">
+                    <span class="feature-badge">
+                      <i class="fas fa-check-circle"></i> Easy Setup
+                    </span>
+                    <span class="feature-badge">
+                      <i class="fas fa-shield-alt"></i> Secure
+                    </span>
+                    <span class="feature-badge">
+                      <i class="fas fa-clock"></i> Time Saving
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Feature Highlights -->
+          <div class="col-md-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="card border-0 h-100 shadow-sm jaadu-card p-3 text-center">
+                  <div class="icon-wrapper" style="background: rgba(26, 35, 126, 0.08); color: #1a237e;">
+                    <i class="fas fa-rocket fs-4"></i>
+                  </div>
+                  <h6 style="font-size: 1rem; margin-bottom: 8px;">2x Faster</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.85rem;">Processing speed</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card border-0 h-100 shadow-sm jaadu-card p-3 text-center">
+                  <div class="icon-wrapper" style="background: rgba(40, 167, 69, 0.08); color: #28a745;">
+                    <i class="fas fa-sync-alt fs-4"></i>
+                  </div>
+                  <h6 style="font-size: 1rem; margin-bottom: 8px;">Real-time Sync</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.85rem;">With Tally</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card border-0 h-100 shadow-sm jaadu-card p-3 text-center">
+                  <div class="icon-wrapper" style="background: rgba(220, 53, 69, 0.08); color: #dc3545;">
+                    <i class="fas fa-chart-line fs-4"></i>
+                  </div>
+                  <h6 style="font-size: 1rem; margin-bottom: 8px;">Smart Insights</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.85rem;">Analytics dashboard</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card border-0 h-100 shadow-sm jaadu-card p-3 text-center">
+                  <div class="icon-wrapper" style="background: rgba(255, 193, 7, 0.08); color: #ffc107;">
+                    <i class="fas fa-user-shield fs-4"></i>
+                  </div>
+                  <h6 style="font-size: 1rem; margin-bottom: 8px;">User Friendly</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.85rem;">Intuitive interface</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Bottom Badges -->
+        <div class="text-center mt-4 pt-3">
+          <div class="d-flex flex-wrap justify-content-center">
+            <!-- <span class="feature-badge">
+              <i class="fas fa-check"></i> No Credit Card Required
+            </span> -->
+            <span class="feature-badge">
+              <i class="fas fa-headset"></i> 24/7 Support
+            </span>
+            <span class="feature-badge">
+              <i class="fas fa-calendar-check"></i> Free Trial
+            </span>
+            <span class="feature-badge">
+              <i class="fas fa-download"></i> Easy Migration
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- 
+  section 3  -->
+
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="fw-semibold mb-5 text-center" style="font-size: 1.8rem; color: #1a237e;">Your Bookkeeping Evolution<span class="text-primary"> Features</span></h2>
+      
+      <div class="timeline-wrapper position-relative">
+        <div class="timeline-line position-absolute start-50 top-0 h-100 bg-primary bg-opacity-10"></div>
+        
+        <!-- Timeline dots -->
+        <div class="timeline-dot position-absolute start-50 translate-middle bg-white rounded-circle" style="top: 1%; width: 16px; height: 16px;"></div>
+        <!-- <div class="timeline-dot position-absolute start-50 translate-middle bg-white rounded-circle" style="top: 30%; width: 16px; height: 16px;"></div> -->
+        <div class="timeline-dot position-absolute start-50 translate-middle bg-white rounded-circle" style="top: 43%; width: 16px; height: 16px;"></div>
+        <!-- <div class="timeline-dot position-absolute start-50 translate-middle bg-white rounded-circle" style="top: 66%; width: 16px; height: 16px;"></div> -->
+        <div class="timeline-dot position-absolute start-50 translate-middle bg-white rounded-circle" style="top: 98%; width: 16px; height: 16px;"></div>
+
+       
+        <!-- Feature 1 -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6">
+            <div class="pe-md-4 text-md-end text-start">
+              <h3 class="text-dark mb-1" style="font-size: 1.3rem;"><i class="fas fa-link text-primary me-2" style="font-size: 22px;"></i>Tally Integration</h3>
+              <p class="text-muted">Keep using Tally as your backend engine while enjoying a modern interface on Jaadu.</p>
+            </div>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+       
+        <!-- Feature 2 -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6 order-md-2">
+            <div class="ps-md-4 text-start">
+              <h3 class="text-dark mb-1" style="font-size: 1.3rem;"><i class="fas fa-sync-alt text-primary me-2" style="font-size: 22px;"></i>Real-Time Sync</h3>
+              <p class="text-muted">Your data stays up-to-date across both platforms automatically.</p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-1"></div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6">
+            <div class="pe-md-4 text-md-end text-start">
+              <h3 class="text-dark mb-1" style="font-size: 1.3rem;"><i class="fas fa-users text-primary me-2" style="font-size: 22px;"></i>Multi-User Access</h3>
+              <p class="text-muted">Empower your team with role-based permissions and secure cloud access.</p>
+            </div>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6 order-md-2">
+            <div class="ps-md-4 text-start">
+              <h3 class="text-dark mb-1" style="font-size: 1.3rem;"><i class="fas fa-check-circle text-primary me-2" style="font-size: 22px;"></i>Error-Free Bookkeeping</h3>
+              <p class="text-muted">Auto-validations and reminders to minimize human errors.</p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-1"></div>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6">
+            <div class="pe-md-4 text-md-end text-start">
+              <h3 class="text-dark mb-1" style="font-size: 1.3rem;"><i class="fas fa-chart-line text-primary me-2" style="font-size: 22px;"></i>Dashboards & Reports</h3>
+              <p class="text-muted">Get intuitive financial insights and custom reports instantly.</p>
+            </div>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <div class="ps-md-4 text-start">
+              <h3 class="text-dark mb-1" style="font-size: 1.3rem;"><i class="fas fa-file-invoice text-primary me-2" style="font-size: 22px;"></i>GST-Ready</h3>
+              <p class="text-muted">Generate compliant invoices and track GST filings effortlessly.</p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-1"></div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<style>
+  .timeline-line {
+    width: 3px;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-dot {
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-dot:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow: 0 0 0 6px rgba(26, 35, 126, 0.2);
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-line {
+      left: 30px !important;
+    }
+    
+    .timeline-dot {
+      left: 30px !important;
+    }
+    
+    .timeline-item div[class^="col"]:first-child {
+      padding-left: 60px;
+    }
+  }
+</style>
+
+  <!-- section 4 -->
+  <section class="py-5" style="background: url('./assets/jaadu_background_converted.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h2 class="text-center  fw-semibold mb-5" style="font-size: 1.8rem; color: #1a237e;">Who is <span class="text-primary">Jaadu</span> For?</h2>
+      
+      <div class="row g-4">
+        <!-- SMB -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white rounded-4 p-4 h-100 position-relative">
+            <span class="number-badge bg-primary text-white">1</span>
+            <i class="fas fa-store text-primary  mb-2" style="font-size: 22px;"></i>
+            <h3 class=" text-dark" style="font-size: 1.3rem; line-height: 15px;  ">Small Businesses</h3>
+            <p class="text-muted small">Streamline your accounting</p>
+          </div>
+        </div>
+        
+        <!-- Accountants -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white rounded-4 p-4 h-100 position-relative">
+            <span class="number-badge bg-primary text-white">2</span>
+            <i class="fas fa-calculator text-primary  mb-2" style="font-size: 22px;"></i>
+            <h3 class=" text-dark" style="font-size: 1.3rem; line-height: 15px;">Accountants</h3>
+            <p class="text-muted small">Manage multiple clients</p>
+          </div>
+        </div>
+        
+        <!-- CA Firms -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white rounded-4 p-4 h-100 position-relative">
+            <span class="number-badge bg-primary text-white">3</span>
+            <i class="fas fa-briefcase text-primary  mb-2" style="font-size: 22px;"></i>
+            <h3 class=" text-dark" style="font-size: 1.3rem; line-height: 15px;">CA Firms</h3>
+            <p class="text-muted small">Enterprise solutions</p>
+          </div>
+        </div>
+        
+        <!-- Entrepreneurs -->
+        <div class="col-md-6 col-lg-3">
+          <div class="bg-white rounded-4 p-4 h-100 position-relative">
+            <span class="number-badge bg-primary text-white">4</span>
+            <i class="fas fa-user-tie text-primary  mb-2" style="font-size: 22px;"></i>
+            <h3 class=" text-dark" style="font-size: 1.3rem; line-height: 15px;">Entrepreneurs</h3>
+            <p class="text-muted small">Simple professional tools</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  .number-badge {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+  }
+  </style>
+
+
+
+<!-- section5 -->
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-semibold mb-5 text-center" style="font-size:1.8rem;color:#1a237e">Why Choose <span class="text-primary">Jaadu?</span></h2>
+    
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="accordion" id="featuresAccordion">
+          <!-- Smart Interface -->
+          <div class="accordion-item border-0 mb-3 rounded-4 overflow-hidden">
+            <h3 class="accordion-header">
+              <button class="accordion-button bg-white shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#feature1" 
+                      style="font-size:1.1rem;color:#1a237e">
+                <i class="fas fa-brain text-primary me-3"></i>
+                Smart Interface
+              </button>
+            </h3>
+            <div id="feature1" class="accordion-collapse collapse show" data-bs-parent="#featuresAccordion">
+              <div class="accordion-body bg-white">
+                No accounting jargon. Just simple flows that anyone can understand and use effectively.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Works With Tally -->
+          <div class="accordion-item border-0 mb-3 rounded-4 overflow-hidden">
+            <h3 class="accordion-header">
+              <button class="accordion-button bg-white shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#feature2" 
+                      style="font-size:1.1rem;color:#1a237e">
+                <i class="fas fa-link text-primary me-3"></i>
+                Works With Tally
+              </button>
+            </h3>
+            <div id="feature2" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+              <div class="accordion-body bg-white">
+                Keep your existing Tally setup intact while enjoying a modern interface and enhanced features.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Cloud-Based -->
+          <div class="accordion-item border-0 mb-3 rounded-4 overflow-hidden">
+            <h3 class="accordion-header">
+              <button class="accordion-button bg-white shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#feature3" 
+                      style="font-size:1.1rem;color:#1a237e">
+                <i class="fas fa-cloud text-primary me-3"></i>
+                Cloud-Based
+              </button>
+            </h3>
+            <div id="feature3" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+              <div class="accordion-body bg-white">
+                Access your financial data from anywhere, on any device, with real-time synchronization.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Secure -->
+          <div class="accordion-item border-0 mb-3 rounded-4 overflow-hidden">
+            <h3 class="accordion-header">
+              <button class="accordion-button bg-white shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#feature4" 
+                      style="font-size:1.1rem;color:#1a237e">
+                <i class="fas fa-lock text-primary me-3"></i>
+                Secure
+              </button>
+            </h3>
+            <div id="feature4" class="accordion-collapse collapse" data-bs-parent="#featuresAccordion">
+              <div class="accordion-body bg-white">
+                End-to-end encrypted with automatic daily backups for complete peace of mind.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(26, 35, 126, 0.05);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(26, 35, 126, 0.2);
+  }
+  .accordion-body {
+    padding: 1.5rem;
+    color: #555;
+  }
+</style>
+
+
+
+
+
+<!-- footer -->
+<!-- 
+<footer class="py-5 bg-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
+        <h2 class="display-5 fw-bold mb-4" style="color: #1a237e;">Ready to Transform Your Bookkeeping?</h2>
+        <p class="lead text-muted mb-4">🔄 From Manual to Magical – Try Jaadu Now!</p>
+        <p class="text-muted mb-4">Let Jaadu handle the numbers while you focus on growth. No more spreadsheets. No more hassles. Just Jaadu.</p>
+        
+        <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
+          <a href="#" class="btn btn-primary btn-lg px-4 rounded-3 fw-bold position-relative overflow-hidden">
+            <span class="position-relative z-index-1">Start Free Trial</span>
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 hover-opacity-10 transition-all"></span>
+          </a>
+          <a href="#" class="btn btn-outline-primary btn-lg px-4 rounded-3 fw-bold position-relative overflow-hidden">
+            <span class="position-relative z-index-1">Request Demo</span>
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-0 hover-opacity-10 transition-all"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="text-center mb-5">
+          <h4 class="text-dark mb-4 position-relative d-inline-block">
+            <i class="fas fa-headset text-primary me-2"></i>
+            <span>Have Questions?</span>
+            <span class="position-absolute bottom-0 start-0 w-100 h-2 bg-primary" style="opacity: 0.2;"></span>
+          </h4>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="mailto:support@jaaduapp.com" class="text-decoration-none text-dark position-relative hover-underline">
+                <i class="fas fa-envelope text-primary me-2"></i> support@jaaduapp.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+91-XXXXXXXXXX" class="text-decoration-none text-dark position-relative hover-underline">
+                <i class="fas fa-phone-alt text-primary me-2"></i> +91-XXXXXXXXXX
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <p class="text-muted mb-0">© 2023 Jaadu. Smart Bookkeeping with Seamless Tally Integration.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="text-decoration-none text-muted me-3 position-relative hover-underline">Privacy</a>
+        <a href="#" class="text-decoration-none text-muted me-3 position-relative hover-underline">Terms</a>
+        <a href="#" class="text-decoration-none text-muted position-relative hover-underline">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #1a237e;
+    transition: width 0.3s ease;
+  }
+  .hover-underline:hover::after {
+    width: 100%;
+  }
+  .transition-all {
+    transition: all 0.3s ease;
+  }
+  .hover-opacity-10:hover {
+    opacity: 0.1 !important;
+  }
+</style>
+ -->
+
+ <footer class="pt-5 bg-white">
+  <div class="container">
+    <!-- Main CTA Section -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
+        <h2 class="display-5 fw-semibold mb-4" style="color: #1a237e; font-size: 2.5rem;">Ready to Transform Your Bookkeeping?</h2>
+        <p class="lead text-muted mb-4">🔄 From Manual to Magical – Try Jaadu Now!</p>
+        <p class="text-muted mb-4">Let Jaadu handle the numbers while you focus on growth. No more spreadsheets. No more hassles. Just Jaadu.</p>
+        
+        <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
+          <a href="#" class="btn btn-primary btn-lg px-4 rounded-3 fw-bold">
+            Start Free Trial
+          </a>
+          <a href="#" class="btn btn-outline-primary btn-lg px-4 rounded-3 fw-bold">
+            Request Demo
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="row justify-content-center py-4 border-top border-bottom">
+      <div class="col-lg-8 text-center">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4">
+          <div class="d-flex align-items-center mb-3 mb-md-0">
+            <i class="fas fa-headset text-primary fs-4 me-3"></i>
+            <div class="text-start">
+              <h4 class="h5 mb-1">Have Questions?</h4>
+              <p class="mb-0 small">We're here to help</p>
+            </div>
+          </div>
+          
+          <div class="vr d-none d-md-block mx-3"></div>
+          
+          <div class="d-flex flex-wrap justify-content-center gap-4">
+            <a href="mailto:support@jaaduapp.com" class="text-decoration-none text-dark d-flex align-items-center">
+              <i class="fas fa-envelope text-primary me-2"></i>
+              support@jaaduapp.com
+            </a>
+            <a href="tel:+91-XXXXXXXXXX" class="text-decoration-none text-dark d-flex align-items-center">
+              <i class="fas fa-phone-alt text-primary me-2"></i>
+              +91-XXXXXXXXXX
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="row py-4">
+      <div class="col-md-6 mb-3 mb-md-0 d-flex align-items-center">
+        <p class="text-muted mb-0">© 2023 Jaadu. Smart Bookkeeping with Seamless Tally Integration.</p>
+      </div>
+      <div class="col-md-6 text-md-end d-flex align-items-center justify-content-md-end">
+        <div>
+          <a href="#" class="text-decoration-none text-muted me-3">Privacy</a>
+          <a href="#" class="text-decoration-none text-muted me-3">Terms</a>
+          <a href="#" class="text-decoration-none text-muted">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+footer a {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+footer a:hover {
+  color: #1a237e !important;
+}
+
+footer a:not(.btn):after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #1a237e;
+  transition: width 0.3s ease;
+}
+
+footer a:not(.btn):hover:after {
+  width: 100%;
+}
+
+.vr {
+  width: 1px;
+  background-color: rgba(0,0,0,0.1);
+  align-self: stretch;
+}
+
+@media (max-width: 767px) {
+  .border-bottom {
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+  }
+  .border-top {
+    border-top: 1px solid rgba(0,0,0,0.1) !important;
+  }
+}
+</style>
+
+
+
+<!-- 
+button for scroll -->
+
+<!-- Add this button at the end of your body tag -->
+<button id="scrollToTopBtn" class="scroll-to-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<style>
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background-color: #366efd;
+  transform: translateY(-3px);
+}
+
+.scroll-to-top i {
+  font-size: 1.2rem;
+}
+</style>
+
+<script>
+// Get the button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// When the user scrolls down 300px from the top, show the button
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    scrollToTopBtn.classList.add("visible");
+  } else {
+    scrollToTopBtn.classList.remove("visible");
+  }
+};
+
+// When clicked, scroll to top
+scrollToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true, // animation happens only once when scrolled into view
+    offset: 100, // distance from the top to trigger animation
+  });
+</script>
+<!-- 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const togglerIcon = document.getElementById('togglerIcon');
+      const navbarCollapse = document.getElementById('navbarNav');
+      
+      // Function to toggle the icon
+      function toggleIcon() {
+          if (navbarCollapse.classList.contains('show')) {
+              togglerIcon.classList.remove('fa-bars');
+              togglerIcon.classList.add('fa-times');
+          } else {
+              togglerIcon.classList.remove('fa-times');
+              togglerIcon.classList.add('fa-bars');
+          }
+      }
+      
+      // Toggle icon when button is clicked
+      navbarToggler.addEventListener('click', toggleIcon);
+      
+      // Also toggle icon when a nav link is clicked (for mobile)
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+              if (window.innerWidth <= 991.98) {
+                  // Close the navbar
+                  const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                      toggle: false
+                  });
+                  bsCollapse.hide();
+                  // Reset the icon
+                  togglerIcon.classList.remove('fa-times');
+                  togglerIcon.classList.add('fa-bars');
+              }
+          });
+      });
+  });
+</script>
+  -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const togglerIcon = document.getElementById('togglerIcon');
+      const navbarCollapse = document.getElementById('navbarNav');
+  
+      // Toggle icon on collapse shown
+      navbarCollapse.addEventListener('shown.bs.collapse', function () {
+        togglerIcon.classList.remove('fa-bars');
+        togglerIcon.classList.add('fa-times');
+      });
+  
+      // Toggle icon on collapse hidden
+      navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+        togglerIcon.classList.remove('fa-times');
+        togglerIcon.classList.add('fa-bars');
+      });
+  
+      // Optional: collapse navbar and reset icon on link click (only for mobile)
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 991.98 && navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            bsCollapse.hide();
+          }
+        });
+      });
+    });
+  </script>
+<style>
+    #togglerIcon {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Optional: scale and fade on icon change */
+.navbar-toggler-icon .fa-bars {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.navbar-toggler-icon .fa-times {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+</style>  
+</body>
+</html>
