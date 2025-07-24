@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,12 +55,22 @@
     .form-check-label {
       font-size: 0.92rem;
     }
-  </style>
-</head>
-<body>
 
 
-  <style>
+
+
+
+
+
+
+
+
+
+
+
+/* navbar css */
+
+    
     .circle-icon {
       background-color: rgb(242,95,95);
       color: white;
@@ -124,214 +135,14 @@
     .logout-btn {
       color: #e74c3c;
     }
-  </style>
-  
-  
-  <!-- Navbar -->
-  <nav class="navbar navbar-light bg-white shadow-sm px-2 py-4 position-relative">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-  
-      <!-- Left: Back Button -->
-      <button class="btn p-0 border-0 bg-transparent" onclick="history.back()">
-        <i class="fas fa-arrow-left fs-5 text-secondary"></i>
-      </button>
-  
-      <!-- Center: Brand Name -->
-      <span class="mx-auto position-absolute start-50 translate-middle-x brand-name">
-        <a href="/tour packages.html">
-          <img src="./assets/zahara-tours-logo.svg" alt="Agent Logo" class=" ms-2" style="width: 70px; height: 70px; ">
-        </a>
-      </span>
-  
-      <!-- Right: Hamburger & Cart -->
-      <div class="d-flex align-items-center gap-3">
-  
-        <!-- Cart Icon with Badge -->
-        <div class="cart-icon-wrapper d-none">
-          <i class="fas fa-shopping-cart fs-5 text-dark"></i>
-          <span class="cart-badge">0</span>
-        </div>
-  
-        <!-- Hamburger Icon -->
-        <button class="btn p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-          <i class="fas fa-bars fs-5 text-secondary"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-  <style>
+ 
     .btn-cls{
       font-size: 12px;
       position: relative;
       bottom: 24px;
     }
-  </style>
-  <!-- Offcanvas Menu -->
-  <!-- Offcanvas Menu -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" style="width: 80%;">
-    <div class="offcanvas-header border-bottom">
-      <div class="d-flex align-items-center">
-        <div class="agent-avatar me-3 circle-icon">A</div>
-        <div>
-          <h5 class="offcanvas-title mb-0">Agent Dashboard</h5>
-          <small class="text-muted">Tour Operator</small>
-        </div>
-      </div>
-      <button type="button" class="btn-close btn-cls" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <a href="tour packages.html" class="offcanvas-menu-item">
-        <i class="fas fa-home me-2"></i>Home
-      </a>
-      <a href="./bookingsummary.html" class="offcanvas-menu-item">
-        <i class="fas fa-suitcase me-2"></i>My Bookings
-      </a>
-      <a href="bookings.html" class="offcanvas-menu-item">
-        <i class="fas fa-calendar-check me-2"></i>Tour Packages
-      </a>
-      <a href="./payment.html" class="offcanvas-menu-item">
-        <i class="fas fa-credit-card me-2"></i>Payments
-      </a>
-      <a href="wishlist.html" class="offcanvas-menu-item">
-        <i class="fas fa-heart me-2"></i>Wishlist
-      </a>
-      <a href="profile.html" class="offcanvas-menu-item">
-        <i class="fas fa-user me-2"></i>Profile
-      </a>
-    </div>
-    <div class="offcanvas-footer p-3 border-top">
-      <a href="/login.html" class="offcanvas-menu-item logout-btn">
-        <i class="fas fa-sign-out-alt me-2"></i>Logout
-      </a>
-    </div>
-  </div>
   
-  
-  
-<div class="container py-4">
-  <h4 class="section-title">Choose Payment Method</h4>
-
-  <!-- Payment Methods -->
-  <div class="row g-3 mb-4">
-    <div class="col-12">
-      <div class="payment-card d-flex align-items-center" onclick="selectMethod(this, 'Card')">
-        <i class="fas fa-credit-card me-3  text-secondary"></i>
-        <div>
-          <h6 class="mb-1">Pay with Card</h6>
-          <p class="text-muted mb-0 small">Credit or Debit card supported. Instant confirmation.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="payment-card d-flex align-items-center" onclick="selectMethod(this, 'Cash')">
-        <i class="fas fa-money-bill-wave text-secondary me-3"></i>
-        <div>
-          <h6 class="mb-1">Pay by Cash</h6>
-          <p class="text-muted mb-0 small">Pay cash at the hotel or our travel desk.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="payment-card d-flex align-items-center" onclick="selectMethod(this, 'FOC')">
-        <i class="fas fa-hand-holding-heart me-3 text-secondary"></i>
-        <div>
-          <h6 class="mb-1">FOC (Free of Cost)</h6>
-          <p class="text-muted mb-0 small">Only for authorized internal bookings.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Additional Options: PDF & Share -->
-  <div class="rounded p-3 bg-white shadow-sm mb-3">
-    <div class="form-check mb-2">
-      <input class="form-check-input" type="checkbox" id="pdfTicket">
-      <label class="form-check-label" for="pdfTicket">Generate PDF Ticket</label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="shareTicket">
-      <label class="form-check-label" for="shareTicket">Share ticket via Email / WhatsApp</label>
-    </div>
-  </div>
-
-  <!-- Terms & Conditions -->
-  <div class="rounded p-3 bg-white shadow-sm mb-4">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="termsCheck">
-      <label class="form-check-label" for="termsCheck">
-        I agree to the <a href="#" class="text-decoration-underline text-primary">terms and conditions</a>.
-      </label>
-    </div>
-  </div>
-
-  <!-- Confirm Button -->
-  <div class="text-center">
-    <button class="btn btn-gradient w-100 py-3" onclick="confirmPayment()">
-      <i class="fas fa-check-circle me-2"></i> Confirm & Proceed
-    </button>
-  </div>
-</div>
-
-<!-- JavaScript -->
-<script>
-  let selectedMethod = null;
-
-  function selectMethod(el, method) {
-    document.querySelectorAll('.payment-card').forEach(card => {
-      card.classList.remove('active');
-    });
-    el.classList.add('active');
-    selectedMethod = method;
-  }
-
-  // function confirmPayment() {
-  //   const agreed = document.getElementById('termsCheck').checked;
-  //   const pdf = document.getElementById('pdfTicket').checked;
-  //   const share = document.getElementById('shareTicket').checked;
-
-  //   if (!selectedMethod) {
-  //     alert("Please select a payment method.");
-  //     return;
-  //   }
-  //   if (!agreed) {
-  //     alert("Please accept the terms and conditions.");
-  //     return;
-  //   }
-
-  //   let message = `✅ Payment Method: ${selectedMethod}`;
-  //   if (pdf) message += `\n📄 PDF Ticket: Yes`;
-  //   if (share) message += `\n📤 Share via Email/WhatsApp: Yes`;
-
-  //   alert(message + "\n\nProceeding to payment...");
-    
-  // }
-</script>
-
-<div id="paymentModal" class="payment-modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close-modal">&times;</span>
-      <h3 class="ms-4"><i class="fas fa-check-circle me-2 d-none"></i> Payment Confirmation</h3>
-    </div>
-    <div class="modal-body">
-      <div class="confirmation-icon">
-        <i class="fas fa-check"></i>
-      </div>
-      <div class="confirmation-details">
-        <p><i class="fas fa-credit-card text-secondary me-2"></i> <strong>Payment Method:</strong> <span id="confirmMethod"></span></p>
-        <p id="confirmPdf" style="display:none;"><i class="fas fa-file-pdf me-2 text-secondary"></i> <strong>PDF Ticket:</strong> Yes</p>
-        <p id="confirmShare" style="display:none;"><i class="fas fa-share-alt me-2 text-secondary"></i> <strong>Share Ticket:</strong> Yes</p>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-gradient w-100 py-2" id="proceedPayment">
-        <i class="fas fa-lock me-2"></i> Secure Payment
-      </button>
-    </div>
-  </div>
-</div>
-
-<style>
+ /* payment modal */
 .payment-modal {
   display: none;
   position: fixed;
@@ -438,7 +249,190 @@
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(46, 139, 87, 0.4);
 }
-</style>
+
+  </style>
+</head>
+<body>
+
+
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-light bg-white shadow-sm px-2 py-4 position-relative">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+  
+      <!-- Left: Back Button -->
+      <button class="btn p-0 border-0 bg-transparent" onclick="history.back()">
+        <i class="fas fa-arrow-left fs-5 text-secondary"></i>
+      </button>
+  
+      <!-- Center: Brand Name -->
+      <span class="mx-auto position-absolute start-50 translate-middle-x brand-name">
+        <a href="/index.html">
+          <img src="./assets/zahara-tours-logo.svg" alt="Agent Logo" class=" ms-2" style="width: 70px; height: 70px; ">
+        </a>
+      </span>
+  
+      <!-- Right: Hamburger & Cart -->
+      <div class="d-flex align-items-center gap-3">
+  
+        <!-- Cart Icon with Badge -->
+        <div class="cart-icon-wrapper d-none">
+          <i class="fas fa-shopping-cart fs-5 text-dark"></i>
+          <span class="cart-badge">0</span>
+        </div>
+  
+        <!-- Hamburger Icon -->
+        <button class="btn p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+          <i class="fas fa-bars fs-5 text-secondary"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Offcanvas Menu -->
+  <!-- Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" style="width: 80%;">
+    <div class="offcanvas-header border-bottom">
+      <div class="d-flex align-items-center">
+        <div class="agent-avatar me-3 circle-icon">A</div>
+        <div>
+          <h5 class="offcanvas-title mb-0">Agent Dashboard</h5>
+          <small class="text-muted">Tour Operator</small>
+        </div>
+      </div>
+      <button type="button" class="btn-close btn-cls" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <a href="/index.html" class="offcanvas-menu-item">
+        <i class="fas fa-home me-2"></i>Home
+      </a>
+      <a href="./bookingsummary.html" class="offcanvas-menu-item">
+        <i class="fas fa-suitcase me-2"></i>My Bookings
+      </a>
+      <a href="./index.html" class="offcanvas-menu-item">
+        <i class="fas fa-calendar-check me-2"></i>Tour Packages
+      </a>
+      <a href="./payment.html" class="offcanvas-menu-item">
+        <i class="fas fa-credit-card me-2"></i>Payments
+      </a>
+      <a href="wishlist.html" class="offcanvas-menu-item">
+        <i class="fas fa-heart me-2"></i>Wishlist
+      </a>
+      <a href="profile.html" class="offcanvas-menu-item">
+        <i class="fas fa-user me-2"></i>Profile
+      </a>
+    </div>
+    <div class="offcanvas-footer p-3 border-top">
+      <a href="/login.html" class="offcanvas-menu-item logout-btn">
+        <i class="fas fa-sign-out-alt me-2"></i>Logout
+      </a>
+    </div>
+  </div>
+<!--   
+  payment method -->
+  
+<div class="container py-4">
+  <h4 class="section-title">Choose Payment Method</h4>
+
+  <!-- Payment Methods -->
+  <div class="row g-3 mb-4">
+    <div class="col-12">
+      <div class="payment-card d-flex align-items-center" onclick="selectMethod(this, 'Card')">
+        <i class="fas fa-credit-card me-3  text-secondary"></i>
+        <div>
+          <h6 class="mb-1">Pay with Card</h6>
+          <p class="text-muted mb-0 small">Credit or Debit card supported. Instant confirmation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="payment-card d-flex align-items-center" onclick="selectMethod(this, 'Cash')">
+        <i class="fas fa-money-bill-wave text-secondary me-3"></i>
+        <div>
+          <h6 class="mb-1">Pay by Cash</h6>
+          <p class="text-muted mb-0 small">Pay cash at the hotel or our travel desk.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="payment-card d-flex align-items-center" onclick="selectMethod(this, 'FOC')">
+        <i class="fas fa-hand-holding-heart me-3 text-secondary"></i>
+        <div>
+          <h6 class="mb-1">FOC (Free of Cost)</h6>
+          <p class="text-muted mb-0 small">Only for authorized internal bookings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Options: PDF & Share -->
+  <div class="rounded p-3 bg-white shadow-sm mb-3">
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="pdfTicket">
+      <label class="form-check-label" for="pdfTicket">Generate PDF Ticket</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="shareTicket">
+      <label class="form-check-label" for="shareTicket">Share ticket via Email / WhatsApp</label>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions -->
+  <div class="rounded p-3 bg-white shadow-sm mb-4">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="termsCheck">
+      <label class="form-check-label" for="termsCheck">
+        I agree to the <a href="#" class="text-decoration-underline text-primary">terms and conditions</a>.
+      </label>
+    </div>
+  </div>
+
+  <!-- Confirm Button -->
+  <div class="text-center">
+    <button class="btn btn-gradient w-100 py-3" onclick="confirmPayment()">
+      <i class="fas fa-check-circle me-2"></i> Confirm & Proceed
+    </button>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  let selectedMethod = null;
+
+  function selectMethod(el, method) {
+    document.querySelectorAll('.payment-card').forEach(card => {
+      card.classList.remove('active');
+    });
+    el.classList.add('active');
+    selectedMethod = method;
+  }
+
+ 
+</script>
+
+<div id="paymentModal" class="payment-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close-modal">&times;</span>
+      <h3 class="ms-4"><i class="fas fa-check-circle me-2 d-none"></i> Payment Confirmation</h3>
+    </div>
+    <div class="modal-body">
+      <div class="confirmation-icon">
+        <i class="fas fa-check"></i>
+      </div>
+      <div class="confirmation-details">
+        <p><i class="fas fa-credit-card text-secondary me-2"></i> <strong>Payment Method:</strong> <span id="confirmMethod"></span></p>
+        <p id="confirmPdf" style="display:none;"><i class="fas fa-file-pdf me-2 text-secondary"></i> <strong>PDF Ticket:</strong> Yes</p>
+        <p id="confirmShare" style="display:none;"><i class="fas fa-share-alt me-2 text-secondary"></i> <strong>Share Ticket:</strong> Yes</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-gradient w-100 py-2" id="proceedPayment">
+        <i class="fas fa-lock me-2"></i> Secure Payment
+      </button>
+    </div>
+  </div>
+</div>
 
 <script>
 // Update your confirmPayment function

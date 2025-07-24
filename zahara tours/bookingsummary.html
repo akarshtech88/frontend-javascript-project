@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,15 +122,12 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-  </style>
-</head>
-<body>
 
 
 
-
-
-<style>
+/* 
+    
+navbar css */
   .circle-icon {
       background-color: rgb(242,95,95);
       color: white;
@@ -194,7 +192,37 @@
   .logout-btn {
     color: #e74c3c;
   }
-</style>
+
+
+  
+  .btn-cls{
+    font-size: 12px;
+    position: relative;
+    bottom: 24px;
+  }
+
+/* accordion icon */
+          .arrow-icon {
+            transition: transform 0.3s ease;
+          
+          }
+        
+          .btn.collapsed .arrow-icon {
+            transform: rotate(0deg);
+          }
+        
+          .btn:not(.collapsed) .arrow-icon {
+            transform: rotate(180deg); /* Arrow points up when open */
+          }
+   
+
+  </style>
+</head>
+<body>
+
+
+
+
 
 
 <!-- Navbar -->
@@ -208,7 +236,7 @@
 
     <!-- Center: Brand Name -->
     <span class="mx-auto position-absolute start-50 translate-middle-x brand-name">
-      <a href="/tour packages.html">
+      <a href="./index.html">
         <img src="./assets/zahara-tours-logo.svg" alt="Agent Logo" class=" ms-2" style="width: 70px; height: 70px; ">
       </a>
     </span>
@@ -231,14 +259,8 @@
     </div>
   </div>
 </nav>
-<style>
-  .btn-cls{
-    font-size: 12px;
-    position: relative;
-    bottom: 24px;
-  }
-</style>
-<!-- Offcanvas Menu -->
+
+
 <!-- Offcanvas Menu -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" style="width: 80%;">
   <div class="offcanvas-header border-bottom">
@@ -252,10 +274,10 @@
     <button type="button" class="btn-close btn-cls" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body p-0">
-    <a href="./tour packages.html" class="offcanvas-menu-item">
+    <a href="./index.html" class="offcanvas-menu-item">
       <i class="fas fa-home me-2"></i>Home
     </a>
-    <a href="./tour packages.html" class="offcanvas-menu-item">
+    <a href="./index.html" class="offcanvas-menu-item">
       <i class="fas fa-suitcase me-2"></i>Tour Packages
     </a>
     <a href="./bookingsummary.html" class="offcanvas-menu-item">
@@ -291,10 +313,10 @@
         
         <!-- Tour Card -->
         <div class="card summary-card mb-4">
-          <img src="./assets/maldives.webp" class="card-img-top tour-image" alt="Tour Image">
+          <img src="./assets/mus-slid-1.jpg" class="card-img-top tour-image" alt="Tour Image">
           <a href="#" class="edit-btn"><i class="fas fa-pen fa-sm"></i></a>
           <div class="card-body">
-            <h5 class="card-title fw-bold">Maldives Paradise Escape</h5>
+            <h5 class="card-title fw-bold">Wahiba Sands</h5>
             <p class="text-muted mb-2">Booking ID: #TRVL-0725</p>
             <div class="d-flex justify-content-between align-items-center">
               <div>
@@ -306,20 +328,7 @@
         </div>
         
 
-        <style>
-          .arrow-icon {
-            transition: transform 0.3s ease;
-          
-          }
-        
-          .btn.collapsed .arrow-icon {
-            transform: rotate(0deg);
-          }
-        
-          .btn:not(.collapsed) .arrow-icon {
-            transform: rotate(180deg); /* Arrow points up when open */
-          }
-        </style>
+       
        <!-- Details Accordion - All sections start collapsed -->
 <div class="accordion mb-4" id="detailsAccordion">
     <!-- Travelers -->
