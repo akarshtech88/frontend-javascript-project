@@ -1,0 +1,15 @@
+Changes I made:
+Removed the global footer background color.
+
+Added the footer-box background color only to the inner box for each column.
+
+Added border-radius: 10px to both columns.
+
+Used Bootstrap’s g-3 gap on the .row so there’s a 10px+ white space gap between columns without breaking the grid.
+
+Kept your col-lg-6 / col-lg-6 structure intact.
+
+
+
+
+ <div style="height:35px;"></div>

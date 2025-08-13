@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceree final </title>
+     
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<style>
+  :root{
+    --hero-grad-1:#d4a8ff;   /* top-left */
+    --hero-grad-2:#fdfaff;   /* top-right */
+    --hero-accent:#ba9ef9;   /* navbar bg */
+    --heading:#4426aa;
+    --heading-span:#9556e6;
+    --para:#6c54c1;
+    --btn-grad-1:#7347f5;
+    --btn-grad-2:#b071f2;
+  }
+
+  body{
+    /* background:#f7f5ff; */
+  
+  }
+
+
+</style>
+
+</head>
+<body>
+   
+    <div class="wrapper">
+
+        
+
+  <!-- ===== Banner (shorter) ===== -->
+
+
+
+
+  <section class="hero">
+    <div class="container">
+
+    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg hero-nav mx-auto px-3">
+    <a class="navbar-brand d-flex align-items-center me-2" href="#">
+      <img src="/assets/doc-logo.png" alt="docree logo" style="padding-left: 43px;">
+    </a>
+  
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navItems">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        
+        <!-- Solutions Dropdown -->
+        <li class="nav-item dropdown"  style="padding-right: 16px;">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Solutions <i class="fas fa-chevron-down ms-1 transition-arrow"></i>
+          </a>
+          <ul class="dropdown-menu custom-dropdown" aria-labelledby="solutionsDropdown">
+            <li><a class="dropdown-item" href="#">Poc</a></li>
+            <li><a class="dropdown-item" href="#">Premium programmatic</a></li>
+            <li><a class="dropdown-item" href="#">ABM</a></li>
+            <li><a class="dropdown-item" href="#">Data IQ</a></li>
+            <li><a class="dropdown-item" href="#">Marketplace</a></li>
+            <li><a class="dropdown-item" href="#">Reptwin</a></li>
+          </ul>
+        </li>
+  
+        <li class="nav-item"><a class="nav-link" href="#"  style="padding-right: 14px;">Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"  style="padding-right: 14px;">About Us</a></li>
+  
+        <!-- Request Demo Button -->
+        <li class="nav-item ms-lg-2">
+          <button class="btn btn-demo">Request Demo</button>
+        </li>
+  
+        <!-- Login Button -->
+        <li class="nav-item ms-lg-2">
+          <button class="btn btn-login">Login</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+<style>
+
+.hero-nav .navbar-brand img{ height:26px; }
+  .hero-nav .nav-link{ color:#fff !important; font-weight:400; padding:.45rem .85rem; font-size: 15px; }
+  .hero-nav .btn-demo{
+    background:#fff; color:#6b4ce0; border:0; border-radius:999px; padding:.48rem 1.5rem; font-weight:500;
+  }
+
+  .hero-nav{
+    background:var(--hero-accent);
+    border-radius:44px;
+    padding: 0.40rem .7rem;
+    margin-top: 1.1rem;
+    box-shadow:0 8px 22px rgba(82,56,163,.14);
+  }
+ 
+
+
+  .hero-nav .btn-demo:hover{ background:#f2eefe; color:#5937df; }
+    /* Dropdown Menu Styles */
+.custom-dropdown {
+  background-color: #F8F6FF;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+.navbar .nav-item.dropdown > .nav-link {
+  padding-left: 26px;
+  padding-right: 26px;
+  border-radius: 20px; /* stays rounded even when not hovered */
+}
+
+/* Hover & active background */
+.navbar .nav-item.dropdown:hover > .nav-link,
+.navbar .nav-item.dropdown.show > .nav-link {
+  background-color: #9b6bf7;
+  color: #fff !important;
+}
+
+
+
+
+
+
+
+/* Change Solutions nav-item background on hover or open */
+.navbar .nav-item.dropdown:hover > .nav-link,
+.navbar .nav-item.dropdown.show > .nav-link {
+  background-color: #9b6bf7;
+  color: #fff !important; /* make text white for contrast */
+  border-radius: 20px!important; /* optional, matches design */
+}
+.navbar .nav-item.dropdown > .nav-link {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+.custom-dropdown .dropdown-item {
+  color: #824BED;
+  font-weight: 400;
+  border-radius: 10px;
+}
+.custom-dropdown .dropdown-item:hover {
+  background-color: rgba(130, 75, 237, 0.1);
+}
+
+/* Arrow rotation animation */
+.transition-arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Login Button */
+.btn-login {
+  background-color: #8654f4!important;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 0.45rem 1rem;
+}
+.btn-login:hover {
+  opacity: 0.9;
+  color: #fff;
+}
+
+/* Mobile nav vertical alignment */
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav {
+    flex-direction: column;        /* Stack items vertically */
+    align-items: flex-start;       /* Left-align items */
+    gap: 8px;                      /* Space between nav items */
+    padding: 10px 0;
+  }
+
+  /* Make nav links full-width for better touch area */
+  .navbar .nav-link {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+
+  /* Dropdown menu on mobile should match full width */
+  .navbar .dropdown-menu {
+    position: static;
+    transform: none !important;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 5px;
+  }
+
+  /* Mobile Solutions hover/active background */
+  .navbar .nav-item.dropdown.show > .nav-link,
+  .navbar .nav-item.dropdown:hover > .nav-link {
+    background-color: #9b6bf7;
+    color: #fff !important;
+  }
+
+  .hero-nav{
+
+    margin-top: -1rem;
+    
+  }
+}
+
+</style>
+  
+<script>
+    // Arrow rotate on dropdown toggle
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownToggles = document.querySelectorAll('#solutionsDropdown');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const arrow = this.querySelector('.transition-arrow');
+      arrow.classList.toggle('rotate');
+    });
+  });
+});
+
+// Arrow rotate CSS
+const style = document.createElement('style');
+style.innerHTML = `
+.rotate {
+  transform: rotate(180deg);
+}
+`;
+document.head.appendChild(style);
+
+</script>
+
+
+      <section class="hero">
+        <div class="container">
+          <div class="row align-items-center " style="padding: 0 40px">
+            
+            <div class="col-lg-12 text-center">
+              <h1 class="fw-semibold">
+                The Only <span style="color: #9B6BF7;">AI-Powered </span> Operating <br/>System for <span style="color: #9B6BF7;">Healthcare Marketing. </span> 
+              </h1>
+              <!-- <p class="mt-3">
+                Add real context to every HCP touchpoint through layers of technology.
+              </p> -->
+      
+              <!-- Spacer for gap -->
+              <div style="height: 40px;"></div>
+      
+              <!-- CTA Button -->
+              <button class="cta-btn">Lets Talk</button>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- CSS -->
+      <style>
+   /* ===== Hero (shorter & aligned like screenshot) ===== */
+   .hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--hero-grad-2) 0%, var(--hero-grad-2) 35%, var(--hero-grad-1) 100%);
+  overflow: hidden;
+}
+
+.hero h1 {
+  color: var(--heading);
+  font-weight: 500!important;
+  letter-spacing: .2px;
+  line-height: 1.2;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -105px;
+}
+
+/* .hero p {
+  color: var(--para);
+  font-size: 19px;
+  line-height: 1.4;
+  max-width: 720px;
+  margin: 0 auto;
+} */
+
+.cta-btn {
+  background: linear-gradient(90deg, var(--btn-grad-1), var(--btn-grad-2));
+  color: #fff;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 3.6rem;
+  font-weight: 400;
+  box-shadow: 0 8px 16px rgba(115, 71, 245, .25);
+}
+
+.cta-btn:hover {
+  opacity: .94;
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: auto;
+    padding: 40px 0;
+  }
+  .hero h1 {
+    font-size: 15px;
+  }
+  .hero p {
+    font-size: .95rem;
+  }
+
+  .cta-btn {
+  background: linear-gradient(90deg, var(--btn-grad-1), var(--btn-grad-2));
+  color: #fff;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 2rem;
+  font-size: 13px;
+  font-weight: 400;
+  box-shadow: 0 8px 16px rgba(115, 71, 245, .25);
+}
+}
+
+      </style>
+      
+      
+    </div>
+  </section>
+
+
+<!-- 
+video-section -->
+
+
+<style>
+
+
+/* Ellipse container */
+.ellipse-wrapper {
+  position: absolute;
+  top: 10px; /* adjust overlap */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+/* Ellipse image */
+.ellipse-img {
+  width: 180px; /* adjust size as needed */
+  height: auto;
+}
+
+/* Vector image centered over ellipse */
+.vector-img {
+  position: absolute;
+  width: 77px; /* adjust to fit ellipse */
+  height: auto;
+}
+
+
+
+
+
+
+
+
+.context-sec {
+  z-index: 50;
+  margin-top: -60px; /* overlaps hero */
+  padding: 60px 0;
+  background: url('/assets/union.png') center top / cover no-repeat;
+  background-size: cover;
+}
+
+/* Top paragraph */
+.context-copy {
+  max-width: 760px;
+  color: #6f6f6f;
+  line-height: 1.65;
+  font-size: 15.5px;
+  padding: 138px 12px 28px;
+}
+
+/* Video wrapper */
+.video-wrap {
+  max-width: 920px;
+  border-radius: 22px;
+  overflow: hidden;
+  margin: 12px auto 28px;
+}
+.video-frame {
+  display: block;
+  border-radius: 22px;
+}
+
+/* Bottom paragraph */
+.bottom-copy {
+  color: #6f6f6f;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (min-width: 992px) {
+  .context-sec {
+    margin-top: -151px;
+    padding-top: 80px;
+  }
+}
+@media (max-width: 575.98px) {
+  .context-sec {
+    margin-top: -40px;
+    padding: 40px 0;
+  }
+  .context-copy {
+    font-size: 14.5px;
+    padding-bottom: 20px;
+  }
+  .video-wrap {
+    border-radius: 16px;
+  }
+  .video-frame {
+    border-radius: 16px;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 992px) {
+  /* .context-sec {
+    margin-top: -80px;
+    padding-top: 80px;
+  } */
+  .ellipse-img {
+    width: 150px;
+  }
+  .vector-img {
+    width: 60px;
+  }
+}
+@media (max-width: 575.98px) {
+  /* .context-sec {
+    margin-top: -40px;
+    padding: 40px 0;
+  } */
+  .ellipse-img {
+    width: 90px;
+  }
+  .vector-img {
+    width: 40px;
+  }
+}
+
+
+
+
+
+
+</style>
+
+
+<section class="context-sec position-relative">
+
+  <div class="ellipse-wrapper">
+    <img src="/assets/Ellipse 1111.png" alt="Ellipse" class="ellipse-img">
+    <img src="/assets/Vector (3).png" alt="Vector" class="vector-img">
+  </div>
+  <div class="container position-relative">
+    <!-- Top text -->
+    <div class="text-center context-copy mx-auto">
+      <p class="mb-0  fs-5 fw-normal" style="color:#6C54C1;">
+        Our patented AI understands multiple layers of context to enhance
+        every HCP interaction in a privacy compliant manner, delivering
+        <span style="color: #AF63DD;">measurably better outcomes, every time.</span>
+      </p>
+    </div>
+
+    <!-- Video container -->
+    <div class="video-wrap mx-auto">
+      <img src="/assets/video-container.png" alt="Video container"
+           class="img-fluid d-block w-100 video-frame">
+    </div>
+
+    <!-- Bottom text -->
+    <p class="text-center bottom-copy mb-0 fs-5" style="color:#6C54C1;">
+      At Doceree, we believe the role of AI is to add more context to
+      every HCP interaction
+    </p>
+  </div>
+</section>
+
+
+
+
+
+<!-- curve-section onion section  -->
+
+
+
+<style>
+  :root{ --bg:#faf3ff; }
+ 
+
+  /* ===== CIRCLE SECTION ===== */
+  .circle-stage{
+    position:relative;
+    min-height:100vh;
+    background:var(--bg);
+    overflow:hidden;
+  }
+  .stack{
+    position:absolute;
+    top:-5%; left:50%;
+    transform:translateX(-50%);
+    width:min(600px,92vw);
+    height:min(600px,92vw);
+    pointer-events:none;
+    z-index:1;
+  }
+  .stack img{
+    position:absolute; inset:0; margin:auto;
+    width:100%; height:100%; object-fit:contain;
+    opacity:0; transform:scale(0.5);
+    will-change:transform, opacity;
+    filter: drop-shadow(0 0 14px rgba(129,62,255,.22));
+  }
+  .card-layer{
+    position:absolute;
+    top:20%; left:50%;
+    transform:translate(-50%,-50%);
+    width:min(420px,86vw);
+    z-index:2;
+    pointer-events:none;
+  }
+  .reading-card{
+    position:absolute; left:0; right:0; margin:0 auto;
+    max-width:420px;
+    opacity:0; transform:translateY(200px);
+    border-radius:12px; background-color:#f9f6ff;
+    box-shadow:0 10px 28px rgba(0,0,0,.06);
+    pointer-events:auto;
+  }
+  .reading-card .card-title{ font-size:1.05rem; }
+  #card1{ z-index:10; } #card2{ z-index:11; } #card3{ z-index:12; } #card4{ z-index:13; }
+  .hint{
+    position:absolute; bottom:14px; width:100%;
+    text-align:center; color:#333; opacity:.6; font-size:13px;
+  }
+
+  /* ===== ONION SECTION ===== */
+
+  /* .onion-sec{
+    background:#fdfaff;
+    position:relative;
+    overflow:hidden;
+  }
+  .onion-sec::after{
+    content:"";
+    position:absolute; right:-18%; bottom:-18%;
+    width:120px; height:120px;
+    background: radial-gradient(closest-side, #e7c9ff 0%, rgba(231,201,255,0) 65%);
+    pointer-events:none;
+    filter: blur(1px);
+  }
+  .onion-hero{ min-height:220px; }
+  .onion-bg{
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-58%);
+    width:min(520px, 90vw); height:auto; opacity:.55; pointer-events:none;
+  }
+  .onion-title{
+    position:relative; color:#824bed; font-weight:800; letter-spacing:.2px;
+    font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.1rem);
+    margin:0; padding-top:72px;
+  }
+  .poc-card{
+    width:200px; height:240px; background:#fff; border-radius:16px;
+    box-shadow:0 10px 24px rgba(127,109,188,.08);
+    outline:1px solid rgba(127,109,188,.18);
+    padding:12px;
+  }
+  .poc-logo{ height:34px; width:auto; display:block; }
+  .poc-text, .poc-link{ color:#7f6dbc; }
+  .poc-text{ font-size:.86rem; line-height:1.4; text-align:left; margin-left:2px; }
+  .poc-link{ font-size:.9rem; font-weight:500; }
+  .poc-arrow{ height:16px; width:16px; opacity:.9; }
+
+  @media (max-width: 991.98px){
+    .onion-hero{ min-height:200px; }
+  }
+  @media (max-width: 576px){
+    .poc-card{ width:100%; height:auto; }
+    .onion-bg{ width:min(440px, 95vw); transform:translate(-50%,-62%); }
+  } */
+</style>
+
+
+<style>
+  
+  
+  
+  /* Section background: mostly #fdfaff with bottom-right glow #e7c9ff */
+  .onion-sec{
+    background: #fdfaff;
+    position: relative;
+    overflow: hidden;
+  }
+  .onion-sec::after{
+    content:"";
+    position:absolute; right:-18%; bottom:-18%;
+    width:120px; height:120px;
+    background: radial-gradient(closest-side, #e7c9ff 0%, rgba(231,201,255,0) 65%);
+    pointer-events:none;
+    filter: blur(1px);
+  }
+
+  
+
+  /* Onion graphic centered behind title */
+  .onion-hero{ min-height: 220px; }
+  .onion-bg{
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%, -58%);
+    width:min(520px, 90vw); height:auto; opacity:.55; pointer-events:none;
+  }
+  .onion-title{
+    position:relative;
+    color:#824bed;
+    font-weight:800;
+    letter-spacing:.2px;
+    font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.1rem);
+    margin: 0;
+    padding-top: 72px;
+  }
+
+  /* ===== Card styles (from your snippet) ===== */
+  .poc-card{
+    width: 200px;
+    height: 240px;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 10px 24px rgba(127,109,188,.08);
+    outline:1px solid rgba(127,109,188,.18);
+    padding:12px;
+  }
+  .poc-logo{ height:34px; width:auto; display:block; }
+  .poc-text, .poc-link{ color:#7f6dbc; }
+  .poc-text{
+    font-size:.86rem; line-height:1.4; text-align:left; margin-left:2px;
+  }
+  .poc-link{ font-size:.9rem; font-weight:500; }
+  .poc-arrow{ height:16px; width:16px; opacity:.9; }
+
+  /* Responsiveness */
+  @media (max-width: 991.98px){
+    .onion-hero{ min-height: 200px; }
+  }
+  @media (max-width: 576px){
+    .poc-card{ width:100%; height:auto; }
+    .onion-bg{ width:min(440px, 95vw); transform:translate(-50%, -62%); }
+
+  
+
+  }
+
+/* Make each grid column a flex item so its child can stretch */
+.onion-sec .row > [class*="col"] {
+  display: flex;
+}
+
+/* Let the card stretch equally: grow + shrink + auto basis */
+.onion-sec .poc-card {
+  flex: 1 1 auto;          /* <-- key line */
+  display: flex;
+  flex-direction: column;
+  width: 100%;             /* override fixed 200px */
+  height: auto;            /* override fixed 240px */
+  min-height: 240px;       /* keep a nice baseline height */
+}
+
+/* Let the card body fill remaining space so footer stays at bottom */
+.onion-sec .poc-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+/* Push the bottom row (Read more + arrow) to the bottom consistently */
+.onion-sec .poc-card .mt-auto {
+  margin-top: auto !important;
+}
+
+/* Optional: tighter vertical rhythm for small screens */
+@media (max-width: 576px){
+  .onion-sec .poc-card { min-height: unset; }
+}
+
+
+ 
+</style>
+
+
+<!-- ===== CIRCLE ANIMATION (PINNED) ===== -->
+<section class="circle-stage" id="circleStage">
+
+  <!-- circles -->
+  <div class="stack" id="stack">
+    <img src="/assets/circle1.png" alt="circle1" id="c1" />
+    <img src="/assets/circle2.png" alt="circle2" id="c2" />
+    <img src="/assets/circle3.png" alt="circle3" id="c3" />
+    <img src="/assets/circle4.png" alt="circle4" id="c4" />
+  </div>
+
+  <!-- cards -->
+  <div class="card-layer" id="cardLayer">
+    <!-- Card 1 -->
+    <div class="card reading-card shadow-sm border-0 p-1" id="card1">
+      <div class="card-body position-relative">
+        <img src="/assets/arrow-icon.png" alt="Arrow Icon" class="position-absolute" style="top:12px; right:12px; width:14px; height:14px;">
+        <div class="d-flex align-items-center mb-2">
+          <i class="fas fa-circle fa-lg me-2" style="color:#9556E6; position:relative; left:-7px;"></i>
+          <h5 class="mb-0 card-title">
+            <span style="color:#4426AA; font-weight:700;">Reading</span>
+            <span style="color:#9556E6; font-style:italic;">layer</span>
+          </h5>
+        </div>
+        <p class="mb-4" style="color:#9556E6; font-size:12px; margin-left:27px;">
+          Aligns content with what HCPs are reading. Powered by Endemic,
+          brings precise, contextual messaging through 2,000+ verified medical sites.
+        </p>
+        <div class="d-flex align-items-center gap-4 flex-wrap" style="margin-left:18px;">
+          <img src="/assets/card-logo1.png" alt="abm" style="max-height:28px;">
+          <img src="/assets/card-logo2.png" alt="Premium Programmatic" style="max-height:28px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card reading-card shadow-sm border-0 p-1" id="card2">
+      <div class="card-body position-relative">
+        <img src="/assets/arrow-icon.png" alt="Arrow Icon" class="position-absolute" style="top:12px; right:12px; width:14px; height:14px;">
+        <div class="d-flex align-items-center mb-2">
+          <i class="fas fa-circle fa-lg me-2" style="color:#9556E6; position:relative; left:-7px;"></i>
+          <h5 class="mb-0 card-title">
+            <span style="color:#4426AA; font-weight:700;">Reading</span>
+            <span style="color:#9556E6; font-style:italic;">layer</span>
+          </h5>
+        </div>
+        <p class="mb-4" style="color:#9556E6; font-size:12px; margin-left:27px;">
+          Aligns content with what HCPs are reading. Powered by Endemic,
+          brings precise, contextual messaging through 2,000+ verified medical sites.
+        </p>
+        <div class="d-flex align-items-center gap-4 flex-wrap" style="margin-left:18px;">
+          <img src="/assets/card-logo1.png" alt="abm" style="max-height:28px;">
+          <img src="/assets/card-logo2.png" alt="Premium Programmatic" style="max-height:28px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card reading-card shadow-sm border-0 p-1" id="card3">
+      <div class="card-body position-relative">
+        <img src="/assets/arrow-/assets/arrow-icon.png" alt="Arrow Icon" class="position-absolute" style="top:12px; right:12px; width:14px; height:14px;">
+        <div class="d-flex align-items-center mb-2">
+          <i class="fas fa-circle fa-lg me-2" style="color:#9556E6; position:relative; left:-7px;"></i>
+          <h5 class="mb-0 card-title">
+            <span style="color:#4426AA; font-weight:700;">Reading</span>
+            <span style="color:#9556E6; font-style:italic;">layer</span>
+          </h5>
+        </div>
+        <p class="mb-4" style="color:#9556E6; font-size:12px; margin-left:27px;">
+          Aligns content with what HCPs are reading. Powered by Endemic,
+          brings precise, contextual messaging through 2,000+ verified medical sites.
+        </p>
+        <div class="d-flex align-items-center gap-4 flex-wrap" style="margin-left:18px;">
+          <img src="/assets/card-logo1.png" alt="abm" style="max-height:28px;">
+          <img src="/assets/card-logo2.png" alt="Premium Programmatic" style="max-height:28px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+
+
+    <div class="card reading-card shadow-sm border-0 p-1" id="card4">
+      <div class="card-body position-relative">
+        <img src="/assets/arrow-/assets/arrow-icon.png" alt="Arrow Icon" class="position-absolute" style="top:12px; right:12px; width:14px; height:14px;">
+        <div class="d-flex align-items-center mb-2">
+          <i class="fas fa-circle fa-lg me-2" style="color:#9556E6; position:relative; left:-7px;"></i>
+          <h5 class="mb-0 card-title">
+            <span style="color:#4426AA; font-weight:700;">Reading</span>
+            <span style="color:#9556E6; font-style:italic;">layer</span>
+          </h5>
+        </div>
+        <p class="mb-4" style="color:#9556E6; font-size:12px; margin-left:27px;">
+          Aligns content with what HCPs are reading. Powered by Endemic,
+          brings precise, contextual messaging through 2,000+ verified medical sites.
+        </p>
+        <div class="d-flex align-items-center gap-4 flex-wrap" style="margin-left:18px;">
+          <img src="/assets/card-logo1.png" alt="abm" style="max-height:28px;">
+          <img src="/assets/card-logo2.png" alt="Premium Programmatic" style="max-height:28px;">
+        </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+
+  <!-- <p class="hint">scroll slowly → smooth 1→2→3 crossfade, 4th only zooms to cover</p> -->
+</section>
+
+<!-- ===== ONION (NEXT SECTION, NO SPACER) ===== -->
+
+<!-- 
+<section class="onion-sec py-5">
+  <div class="container" style="max-width: 878px;">
+
+    <div class="onion-hero text-center position-relative mb-4 mb-lg-5">
+      <img src="/assets/onion.png" alt="" class="onion-bg" aria-hidden="true">
+      <h2 class="onion-title">HCP context onion</h2>
+    </div>
+
+
+    <div class="row row-cols-2 row-cols-md-4 g-3 g-lg-4 justify-content-center">
+   
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="poc" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col d-flex justify-content-center">
+    
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="abm" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+      
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="copay" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+>
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="endemic" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="poc" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="abm" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="copay" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="endemic" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section> -->
+
+<!-- ===== HCP Context Onion Section ===== -->
+<section class="onion-sec py-5">
+  <div class="container" style="max-width: 878px;">
+
+    <!-- Onion graphic + heading -->
+    <div class="onion-hero text-center position-relative mb-4 mb-lg-5">
+      <img src="/assets/onion.png" alt="" class="onion-bg" aria-hidden="true">
+      <h2 class="onion-title">HCP context onion</h2>
+    </div>
+
+    <!-- Cards grid: 4 + 4 -->
+    <div class="row row-cols-2 row-cols-md-4 g-3 g-lg-4 justify-content-center  ">
+
+      <!-- Row 1 -->
+      <div class="col d-flex justify-content-center">
+        <!-- Card 1 -->
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="poc" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">
+              Get all HCP insights on a single platform.​
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <!-- Card 2 (duplicate content / swap logo if needed) -->
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="abm" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">
+              Access and activate premium, verified HCP
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <!-- Card 3 -->
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="copay" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">
+              Deliver contextually relevant
+              messages to HCPs across 2000+ medical platforms​
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <!-- Card 4 -->
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="endemic" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">
+              Engage and influence key decision-makers at high value accounts with intent-led nudges
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 (same 4 again) -->
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="poc" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">Deliver personalized, ​​
+              clinically-relevant messages to HCPs​
+              within clinical workflows ​</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="abm" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, ipsum. sit amet, consectetur </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="copay" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">messages, delivered within clinical workflows</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="card poc-card border-0">
+          <div class="card-body d-flex flex-column">
+            <img src="/assets/card-logo1.png" alt="endemic" class="poc-logo mx-auto mb-3">
+            <p class="poc-text mb-4">built exclusively for healthcare publishers​</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <a href="#" class="poc-link text-decoration-none">Read more</a>
+              <img src="/assets/arrow-icon.png" alt="open" class="poc-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const section = document.getElementById('circleStage');
+  const stack   = document.getElementById('stack');
+
+  const c1 = document.getElementById('c1');
+  const c2 = document.getElementById('c2');
+  const c3 = document.getElementById('c3');
+  const c4 = document.getElementById('c4');
+
+  const card1 = document.getElementById('card1');
+  const card2 = document.getElementById('card2');
+  const card3 = document.getElementById('card3');
+  const card4 = document.getElementById('card4');
+
+  gsap.defaults({ ease: "power2.out" });
+
+  function coverScale(){
+    const base = stack.offsetWidth;
+    const target = Math.max(section.offsetWidth, section.offsetHeight);
+    return (target / base) * 1.06; // tiny safety
+  }
+
+  function buildTL(){
+    const s4 = coverScale();
+
+    // init: c1..c3 normal; c4 will be handled separately to only zoom-cover
+    gsap.set([c1,c2,c3], {autoAlpha:0, scale:0.5});
+    gsap.set(c4, {autoAlpha:0, scale:0.2}); // hidden & tiny
+    gsap.set([card1,card2,card3,card4], {autoAlpha:0, y:200});
+
+    const tl = gsap.timeline({
+      scrollTrigger:{
+        trigger: section,
+        start: "top top",
+        end: "bottom+=480% top", // long, super-smooth scrub
+        scrub: 1.6,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      },
+      smoothChildTiming: true
+    });
+
+    function revealPair(circle, fadePrev, card, finalY){
+      tl.to(circle, {autoAlpha:1, scale:"+=0.22", duration:1.0}, "phase")
+        .to(card,   {autoAlpha:1, y:finalY, duration:0.9}, "<0.15")
+        .to(fadePrev, {autoAlpha:0.15, duration:0.8, ease:"power1.out"}, "<0.10");
+    }
+
+    // Phase 1
+    tl.to(c1, {autoAlpha:1, scale:0.70, duration:1.0}, "phase0")
+      .to(card1, {autoAlpha:1, y:0, duration:0.9}, "<0.15")
+      .to(c1, {autoAlpha:0.18, duration:0.8, ease:"power1.out"}, "+=0.15");
+
+    // Phase 2
+    revealPair(c2, c1, card2, 40);
+
+    // Phase 3
+    tl.to(c3, {autoAlpha:1, scale:1.18, duration:1.1}, "phase2+=0.15")
+      .to(card3, {autoAlpha:1, y:80, duration:0.9}, "<0.15")
+      .to(c2, {autoAlpha:0.15, duration:0.8, ease:"power1.out"}, "<0.10");
+
+    // Phase 4 — ONLY zoom-in cover for c4
+    tl.to(c4, {
+        autoAlpha: 1,
+        scale: s4,
+        duration: 1.2,
+        ease: "power2.inOut"
+      }, "phase3+=0.10")
+      .to(card4, { autoAlpha:1, y:120, duration:0.9 }, "<0.10")
+      .to([c1,c2,c3], { autoAlpha:0, duration:0.6, ease:"power1.out" }, "<0.0");
+
+    return tl;
+  }
+
+  let master = buildTL();
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    if (master) master.kill();
+    master = buildTL();
+  });
+
+  // Optional: onion section fades in smoothly when it enters
+  gsap.from(".onion-sec", {
+    scrollTrigger: { trigger: ".onion-sec", start: "top 80%", toggleActions: "play none none reverse" },
+    opacity: 0, y: 50, duration: 1
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<!-- testimonial section -->
+
+
+<style>
+  .testimonial-section {
+      padding: 60px 0;
+      background-color: #f6ecff;
+  }
+  .section-title {
+    color: #000;
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+  .brand-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100%;
+  }
+  .brand-name {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #824BED;
+      text-align: start;
+    
+  }
+  .brand-description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #6e6d6d;
+  }
+  .card-img {
+      width: 100%;
+      height: auto;
+      margin-top: -15px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+  }
+</style>
+
+
+<section class="testimonial-section">
+  <div class="container">
+      <h2 class="section-title">Customer Testimonials</h2>
+      
+      <div class="row">
+          <!-- First Brand Card -->
+          <div class="col-md-4">
+              <div class="brand-card">
+                  <img src="/assets/final1.png" alt="Miscounty Brand" class="card-img">
+                  <div class="brand-name">Marketing Head</div>
+                  <div class="brand-description">
+                    Doceree's strength lies in its ability to have an all-
+                    encompassing inventory and be an aggregator of diverse
+                    platforms. I also think Doceree's reporting capabilities are a real strength.
+                    
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Second Brand Card -->
+          <div class="col-md-4">
+              <div class="brand-card">
+                  <img src="/assets/final2.png" alt="Miscounty Brand" class="card-img">
+                  <div class="brand-name">Marketing Head</div>
+                  <div class="brand-description">
+                    Doceree's strength lies in its ability to have an all-
+                    encompassing inventory and be an aggregator of diverse
+                    platforms. I also think Doceree's reporting capabilities are a real strength.
+                    
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Third Brand Card -->
+          <div class="col-md-4">
+              <div class="brand-card">
+                  <img src="/assets/final3.png" alt="Miscounty Brand" class="card-img">
+                  <div class="brand-name">Marketing Head</div>
+                  <div class="brand-description">
+                    Doceree's strength lies in its ability to have an all-
+                    encompassing inventory and be an aggregator of diverse
+                    platforms. I also think Doceree's reporting capabilities are a real strength.
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<!-- contact form  -->
+
+<style>
+  /* Section wrapper with reduced width and border radius */
+  .form-section {
+    background: #f8f6ff;
+    padding: 20px 10px;
+    border-radius: 40px;
+    max-width: 90%;  /* reduce full width */
+    margin: 40px auto; /* center it horizontally */
+  }
+
+  /* Inner form card */
+  .contact-wrap{
+    /* background: radial-gradient(120% 140% at 10% 0%, #ffffff 0%, #f7f4ff 55%, #ffffff 100%); */
+    border-radius: 24px;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,.05); */
+    /* border: 1px solid rgba(130,75,237,.12); */
+    padding: 28px;
+    max-width: 860px;
+    margin: auto;
+  }
+
+  /* Heading */
+  .contact-title{
+    font-weight: 400;
+    color:#000;
+    text-align:center;
+    margin-bottom: 20px;
+  }
+  .contact-title span{ color:#824BED; }
+
+  /* Inputs */
+  .soft-input{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius: 14px;
+    height: 52px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color:#333;
+  }
+  .soft-input::placeholder{ color:#9b9b9b; }
+
+  /* Textarea */
+  .soft-textarea{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius: 14px;
+    min-height: 120px;
+    padding: 14px 16px;
+    resize: vertical;
+    font-size: 0.95rem;
+  }
+  .soft-textarea::placeholder{ color:#9b9b9b; }
+
+  /* Focus style */
+  .soft-input:focus, .soft-textarea:focus, .form-select.soft-select:focus{
+    border-color:#cbb1ff;
+    box-shadow: 0 0 0 .25rem rgba(130,75,237,.12);
+    outline: none;
+  }
+
+  /* Select with custom arrow image */
+  .soft-select{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius: 14px;
+    height: 52px;
+    padding: 12px 44px 12px 16px;
+    font-size: 0.95rem;
+    color:#9b9b9b;
+    appearance: none;
+    background-image: url('/assets/droparrow.png');
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 24px auto;
+  }
+
+  /* Tight vertical rhythm */
+  .g-soft{ row-gap: 14px; }
+
+  @media (max-width: 576px){
+    .contact-wrap{ padding: 20px; }
+  }
+</style>
+
+
+<div class="form-section">
+  <div class="container">
+    <div class="contact-wrap">
+      <h3 class="contact-title">Get In <span>Touch</span></h3>
+
+      <form>
+        <div class="row g-soft">
+          <!-- First Name / Last Name -->
+          <div class="col-12 col-md-6">
+            <input type="text" class="form-control soft-input" placeholder="Enter First Name" />
+          </div>
+          <div class="col-12 col-md-6">
+            <input type="text" class="form-control soft-input" placeholder="Enter First Name" />
+          </div>
+
+          <!-- Organization -->
+          <div class="col-12">
+            <input type="text" class="form-control soft-input" placeholder="Organization" />
+          </div>
+
+          <!-- Email / Phone -->
+          <div class="col-12 col-md-6">
+            <input type="email" class="form-control soft-input" placeholder="Work Email ID" />
+          </div>
+          <div class="col-12 col-md-6">
+            <input type="tel" class="form-control soft-input" placeholder="Phone Number" />
+          </div>
+
+          <!-- Select -->
+          <div class="col-12">
+            <select class="form-select soft-select">
+              <option selected disabled>Product You are interested in ?</option>
+              <option>Product A</option>
+              <option>Product B</option>
+              <option>Product C</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="col-12">
+            <textarea class="form-control soft-textarea" placeholder="Enter your Message"></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- footer -->
+<style>
+    .footer-section {
+      padding: 50px 0;
+    }
+  
+    /* Wider than default container */
+    .footer-section .mx-w {
+      max-width: 1278px;
+    }
+  
+    .footer-box {
+      background-color: #fafafa;
+      border-radius: 10px;
+      padding: 20px;
+      height: 100%;
+    }
+    .footer-box2 {
+      background-color: #fafafa;
+      border-radius: 10px;
+      padding: 20px;
+      height: 100%;
+    }
+  
+    .footer-desc {
+      font-size: 14px;
+      color: #555;
+    }
+  
+    .footer-logos img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .footer-heading {
+      color: #824BED;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  
+    .footer-section a {
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+      padding-left: 28px;
+    }
+  
+    .footer-section a:hover {
+      color: #824BED;
+    }
+  
+    .footer-address {
+      font-size: 12px;
+      padding-left: 20px;
+      color: #555;
+      margin-bottom: 18px;
+    }
+  
+    .subscribe-btn {
+      background: linear-gradient(90deg, var(--btn-grad-1), var(--btn-grad-2));
+      color: #fff;
+      border-radius: 20px;
+      width: 50%;
+      border: none;
+    }
+  
+    .subscribe-btn:hover {
+      opacity: 0.9;
+    }
+  
+    /* Gap between left and right column */
+    .gap-col {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  
+    @media (max-width: 767px) {
+      /* .footer-section {
+        text-align: center;
+      } */
+      .footer-logos {
+        justify-content: center;
+      }
+    
+    .footer-box {
+       text-align: left;
+    }
+    .footer-box2 {
+       text-align: center;
+    }
+   
+    
+    .footer-section a {
+     
+      padding-left: 0;
+    }
+  
+    .footer-address {
+      font-size: 12px;
+      padding-left: 0px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    
+    .subscribe-btn {
+   
+      width: 70%;
+      font-size: 12px;
+      
+    }
+  
+    }
+
+
+
+
+    /* Mobile-only changes */
+@media (max-width: 767px) {
+  /* Ensure order for mobile */
+  .footer-quick-links {
+    order: 1;
+  }
+  .footer-address-subscribe {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  /* Move icon above heading text */
+  .footer-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* or center if you want centered headings */
+  }
+  .footer-heading i {
+    margin-bottom: 5px;
+    margin-right: 0 !important;
+  }
+
+  
+}
+
+
+
+
+@media (max-width: 767.98px){
+  .mobile-sublogo{
+    height: 28px;      /* adjust as you like */
+    width: auto;
+  }
+}
+
+  </style>
+  
+  <footer class="footer-section">
+    <div class="container mx-w">
+      <div class="row g-0">
+        
+        <!-- Left Column -->
+        <div class="col-lg-6 gap-col">
+          <div class=" footer-box2 h-100">
+            <!-- Logo -->
+            <img src="/assets/footer-logo.png" class="m-logo"  alt="Doceree Logo" class="mb-3" style="max-width:180px; ">
+    
+            <div style="height:35px;" ></div>
+    
+            <!-- Description -->
+            <p class="footer-desc mt-0 mt-md-4">
+              Leading the way in making HCP–patient conversations richer and more meaningful through patented, responsive technology.
+              Doceree addresses both current and emerging challenges for healthcare and life sciences organizations in HCP–patient engagement,
+              particularly where digital and technological advancements play a crucial role.
+            </p>
+    
+            <div style="height:35px;" class="d-none d-md-block"></div>
+    
+            <!-- Single Footer Sub Logo -->
+            <div class="footer-logos mt-custom" style="margin-top: 25px;">
+                <!-- Desktop / tablet sprite -->
+                <img src="/assets/footer-sublogos.png"
+                     alt="Footer Sub Logo"
+                     class="d-none d-md-inline-block"
+                     style="max-width: 300px; height: auto;">
+              
+                <!-- Mobile-only two logos in one row -->
+                <div class="d-flex d-md-none align-items-center justify-content-center gap-3">
+                  <img src="./assets/image 309 (1).png" alt="Logo 1" class="mobile-sublogo">
+                  <img src="./assets/image 310.png" alt="Logo 2" class="mobile-sublogo">
+                </div>
+              </div>
+              
+          </div>
+        </div>
+    
+        <!-- Right Column -->
+        <div class="col-lg-6 gap-col">
+          <div class="footer-box  h-100">
+            <!-- First Row: Quick Links + Policies -->
+            <div class="row footer-quick-links">
+              <div class="col-md-6  col-6 mb-4 mb-md-0">
+                <h6 class="footer-heading"><i class="fas fa-link me-2"></i>Quick links</h6>
+                <ul class="list-unstyled">
+                  <li><a href="#">Marketers</a></li>
+                  <li><a href="#">Market Access</a></li>
+                  <li><a href="#">EHR Platforms</a></li>
+                  <li><a href="#">Publishers</a></li>
+                  <li><a href="#">Marketplace</a></li>
+                  <li><a href="#">Insights</a></li>
+                  <li><a href="#">About us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6  col-6  mb-4 mb-md-0">
+                <h6 class="footer-heading"><i class="fas fa-file-alt me-3"></i>Policies</h6>
+                <ul class="list-unstyled">
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service - Advertiser</a></li>
+                  <li><a href="#">Program Policy Terms</a></li>
+                  <li><a href="#">Content Policy</a></li>
+                  <li><a href="#">Media and Partner Resources</a></li>
+                  <li><a href="#">Patient Affordability Program Policy</a></li>
+                  <li><a href="#">Terms of Service-Marketplace</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <!-- Second Row: Address + Subscribe -->
+            <div class="row mt-3    footer-address-subscribe">
+              <div class="col-md-6  col-6 ">
+                <h6 class="footer-heading"><i class="fas fa-map-marker-alt me-2"></i>Address</h6>
+                <p class="footer-address">
+                  <strong>US Headquarters</strong><br>150 John F Kennedy Pkwy, Suite 463,<br>Short Hills, NJ 07078
+                </p>
+                <p class="footer-address ">
+                  <strong>UK Office</strong><br>Doceree UK Ltd Spaces, 83 Baker Street, London W1U 6AG
+                </p>
+                <p class="footer-address">
+                  <strong>India Office</strong><br>Max Square, Floor 11, Plot No. C3-C, Sector 129, Noida-Greater Noida Expressway, Noida, Uttar Pradesh 201304
+                </p>
+              </div>
+              <div class="col-md-6  col-6 ">
+                <h6 class="footer-heading"><i class="fas fa-envelope me-2"></i>Subscribe to the newsletter</h6>
+                <form class="d-flex flex-column">
+                  <input type="email" class="form-control mb-2" placeholder="Email">
+                  <button class="btn subscribe-btn " >Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </footer>
+  
+
+    </div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true, // animation happens only once when scrolled into view
+    offset: 100, // distance from the top to trigger animation
+  });
+</script>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
